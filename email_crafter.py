@@ -9,27 +9,24 @@ class EmailCrafter:
     Crafts an email based on the search results and student preferences.
     """
 
-    def __init__(self, google_api_key: str):
-        self.google_api_key = google_api_key
+    def __init__(self, model):
+        self.model = model
 
     def generate_email(self, prompt: str) -> str:
-        # Configure the Google Gemini Pro model
-        genai.configure(api_key=self.google_api_key)
-        self.model = genai.GenerativeModel("gemini-pro")
+        # Generating the email using the Gemini Pro model
+        return self.model.generate_content(prompt)
 
         # Generating the email using the Gemini Pro model
         return self.model.generate_content(prompt)
 
-    def craft_email(
-        self, student_info: Dict, professor_info: Dict, sample_emails: Dict
-    ) -> str:
+    def craft_email(self, student_info: Dict, professor_info: Dict) -> str:
         # Prompt 1: Student generates the initial email draft
         prompt_1 = (
             f"Write an email as a student reaching out to a professor. \n"
             f"Student Information: {json.dumps(student_info)}\n"
             f"Professor Information: {professor_info.get('Employee', 'N/A')}, {professor_info.get('Position', 'N/A')}, {professor_info.get('Department', 'N/A')}\n"
-            f"Search Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}, {professor_info.get('Result_4', 'N/A')}, {professor_info.get('Result_5', 'N/A')}\n"
-            f"Sample Emails for Guidance: {json.dumps(sample_emails)}\n"
+            f"Search Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
+            f"Student advice: {student_email_advice}\n"
             f"Email (formatted in markdown):\n"
         )
 
@@ -47,6 +44,7 @@ class EmailCrafter:
             f"Professor's Feedback: {professor_feedback.text}\n"
             f"Student advice: {student_email_advice}\n"
             f"Student Email:{initial_draft.text}\n"
+            f"Searched Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
             "NB: This is the final email that will be sent to the professor. Do not include any comments, placeholders or notes. Do the best with what you have."
             "Refined Email(formatted in markdown):"
         )

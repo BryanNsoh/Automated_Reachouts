@@ -1,62 +1,115 @@
 # Information about the student
 student_info = {
-    "Name": "Nkem Afolayan",
+    "Name": "Mary Mambo",
+    "Gender": "Female",
+    "Date of Birth": "03/03/1997",
     "Nationality": "Cameroonian",
-    "Age": 28,
+    "Contact": {"Phone": "+237676292112", "Email": "mambomary33@gmail.com"},
+    "Personal Statement": "A result-driven young professional with interest in food and development economics. Motivated by the need to address economic development crises in developing countries by examining cultural and political institutions and their impact on ordinary people worldwide. A development enthusiast focused on bridging the gap between research findings and practical applications.",
     "Education": {
-        "Undergraduate": {
-            "Degree": "BSc in Agricultural Science",
-            "University": "University of Yaoundé I",
-            "Year Graduated": 2017,
-        },
         "Postgraduate": {
-            "Degree": "Masters in Sustainable Development",
-            "University": "University of Dschang",
+            "Degree": "MSc Economics Science",
+            "University": "University of Bamenda",
+            "Grade": "Very Good",
             "Year Graduated": 2019,
         },
+        "Undergraduate": {
+            "Degree": "BSc Economics Science",
+            "University": "University of Buea",
+            "Grade": "Very Good",
+            "Year Graduated": 2016,
+        },
+        "Teacher Diploma": {
+            "Degree": "DIPET 1 (Teacher diploma of technical education first degree)",
+            "Institution": "Higher Technical Teachers’ Training College Bambili",
+            "Grade": "Very Good",
+            "Year Completed": 2019,
+        },
+        "Secondary Education": {
+            "Qualification": "General Certificate of Education (Advanced and Ordinary Levels)",
+            "School": "Government High School, Bokwaongo-Buea",
+            "Year Completed": 2013,
+        },
+        "Primary Education": {
+            "Qualification": "First School Leaving Certificate",
+            "School": "Catholic School Buea Station",
+            "Year Completed": 2006,
+        },
+    },
+    "Further Education": {
+        "Course": "Introduction to Gender Based Violence Eradication Platforms in Schools",
+        "Organization": "United Nations for Children Fund (UNICEF)",
+        "Year": 2023,
+        "Impact": "Specialized in service delivery, enabling environment, and emergency response against gender-based violence in Cameroon.",
     },
     "Work Experience": [
         {
-            "Role": "Agricultural Extension Officer",
-            "Organization": "Green Cameroon",
-            "Duration": "2017-2018",
+            "Role": "Teacher",
+            "Organization": "Government Technical High School, Manengole",
+            "Duration": "2019-Present",
             "Responsibilities": [
-                "Implemented sustainable farming practices in rural communities",
-                "Organized workshops for local farmers on crop diversification",
+                "Planned Economics, Mathematics and Management lessons",
+                "Adopted various teaching methods for positive learning outcomes",
+                "Enhanced social abilities and learning skills among students",
             ],
         },
         {
-            "Role": "Project Coordinator",
-            "Organization": "Farmers Without Borders",
+            "Role": "Livelihood Support Officer",
+            "Organization": "Women in Action Against Gender Based Violence",
             "Duration": "2019-2020",
             "Responsibilities": [
-                "Led a team on agricultural development projects",
-                "Managed partnerships with local NGOs and government bodies",
+                "Technical planning, supervision, and monitoring of public awareness activities",
+                "Coordination with municipalities, authorities, and beneficiaries in Nguti community",
+            ],
+        },
+        {
+            "Role": "Marketing Intern",
+            "Organization": "CAMPOST",
+            "Duration": "2017-2019",
+            "Responsibilities": [
+                "Developing data collection tools such as surveys",
+                "Collecting and analyzing data to identify consumer trends",
+                "Creating graphic representations of data",
             ],
         },
     ],
-    "Teaching Experience": {
-        "Role": "Science Teacher",
-        "School": "Yaoundé High School",
-        "Duration": "2020-2021",
-        "Subjects": ["Biology", "Environmental Science"],
-        "Achievements": [
-            "Developed a new environmental science curriculum",
-            "Organized student-led sustainability projects",
+    "Skills": {
+        "Organizational/Managerial": ["Leadership", "Interpersonal skills"],
+        "Digital": ["Office suite", "Statistical software (SPSS, STATA)"],
+        "Other": [
+            "Graphics design",
+            "Team work",
+            "Time management",
+            "Adaptability",
+            "Fashion designing",
         ],
     },
-    "Skills": [
-        "Project Management",
-        "Community Outreach",
-        "Sustainable Agriculture",
-        "Educational Leadership",
-    ],
-    "Languages": ["English", "French", "Bamun"],
+    "Languages": {"English": "Very Good", "French": "Good", "Ngemba": "Native"},
     "Interests": [
+        "Development Economics",
+        "Educational Economics",
+        "Gender Studies",
         "Sustainable Development",
-        "Education Reform",
-        "Agricultural Technology",
+        "Public Policy and Administration",
+        "Global Health Economics",
+        "Agricultural Economics",
+        "Social Research and Statistics",
+        "International Relations",
+        "Environmental Economics",
+        "Urban and Regional Planning",
+        "Social Entrepreneurship",
+        "Economic Policy",
+        "Human Resource Development",
+        "Nonprofit Management and Leadership",
     ],
+    "Additional Information": {
+        "Dissertation": "Role of women empowerment in Economic Development in Cameroon",
+        "Seminars": "The Role of educational planning in agricultural development",
+        "Memberships": [
+            "Cameroon Teachers Trade Union",
+            "Youth Development Network Club",
+        ],
+    },
 }
 
 perplexity_system_msg = "Provide a thorough, highly detailed, nuanced and comprehensive response to the following question:"
@@ -114,7 +167,7 @@ student_email_advice = """Email Template for Reaching Out to Professors
                 """
 
 professor_email_advice = """
-As an experienced research professor, your task is to provide concise, actionable feedback on a student's email draft. Focus primarily on areas of improvement that can increase the likelihood of a positive response from another professor. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message. Your insights should guide the student in refining their approach to be more effective and impactful.
+As an experienced research professor, your task is to provide concise, actionable feedback on a student's email draft. Focus primarily on areas of improvement that can increase the likelihood of a positive response from another professor. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message. Your insights should guide the student in refining their approach to be more effective and impactful. Be bluntly and brutally honest, as well as constructive.
 
 Student's email:
 """

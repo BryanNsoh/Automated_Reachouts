@@ -1,0 +1,454 @@
+[
+    {
+        "Employee": "AGASTYA, Murali",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Microeconomics",
+        "Contact": "murali.agastya@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "AMARASINGHE, Ashani",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Econometrics",
+        "Contact": "ashani.amarasinghe@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "ANCEV, Tiho",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Environmental and Resource Economics",
+        "Contact": "tiho.ancev@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "ASRPOMOURGOS, Tony",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "History of Economic Thought",
+        "Contact": "tony.aspromourgos@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "ATALAY, Kadir",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Applied Microeconomics",
+        "Contact": "kadir.atalay@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "BARRETT, Garry",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Applied Microeconometrics",
+        "Contact": "garry.barrett@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "BEARE, Brendan K",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Econometric Theory",
+        "Contact": "brendan.beare@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "BIRULIN, Oleksii",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "oleksii.birulin@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "BURKOVSKAYA, Anastasia",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "anastasia.burkovskaya@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "CHEUNG, Stephen",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Experimental Economics",
+        "Contact": "stephen.cheung@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "CHOWDHURY, Shyamal",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Development Economics",
+        "Contact": "shyamal.chowdhury@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "COBB-CLARK, Deborah",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Labour Economics",
+        "Contact": "deborah.cobb-clark@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "CORTES PERUFFO, Marcel",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "marcel.cortesperuffo@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "DANG, Tung",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "tung.dang@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "DE ROOS, Nicolas",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Industrial Organization",
+        "Contact": "nicolas.deroos@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "EDWARDS, Rebecca",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "rebecca.edwards@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "Hayley FISHER",
+        "Contact": "hayley.fisher@sydney.edu.au",
+        "Department": "Labour Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Timothy FISHER",
+        "Contact": "timothy.fisher@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Alastair FRASER",
+        "Contact": "alastair.fraser@sydney.edu.au",
+        "Department": "Behavioural Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Christopher GIBBS",
+        "Contact": "christopher.gibbs@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Christian GILLITZER",
+        "Contact": "christian.gillitzer@sydney.edu.au",
+        "Department": "Public Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "James GRAHAM",
+        "Contact": "james.graham@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Pablo GUILLEN ALVAREZ",
+        "Contact": "pablo.guillen@sydney.edu.au",
+        "Department": "Game Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Hugh HARLEY",
+        "Contact": "hugh.harley@sydney.edu.au",
+        "Department": "Financial Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Luke HARTIGAN",
+        "Contact": "luke.hartigan@sydney.edu.au",
+        "Department": "Econometrics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Jian HONG",
+        "Contact": "jian.hong@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Stella HUANGFU",
+        "Contact": "stella.huangfu@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Ranae JABRI",
+        "Contact": "ranae.jabri@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Hyundam JE",
+        "Contact": "hyundam.je@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Jasmine JIANG",
+        "Contact": "jasmine.jiang@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Onur KESTEN",
+        "Contact": "onur.kesten@sydney.edu.au",
+        "Department": "Microeconomic Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "David KIM",
+        "Contact": "david.kim@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Mert KIMYA",
+        "Contact": "mert.kimya@sydney.edu.au",
+        "Department": "Microeconomic Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Mariano KULISH",
+        "Contact": "mariano.kulish@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Simon KWOK",
+        "Contact": "simon.kwok@sydney.edu.au",
+        "Department": "Microeconomic Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Moyu LIAO",
+        "Contact": "moyu.liao@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Denny LIE",
+        "Contact": "denny.lie@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Ye LU",
+        "Contact": "ye.lu@sydney.edu.au",
+        "Department": "Industrial Organization",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Chandana MAITRA",
+        "Contact": "chandana.maitra@sydney.edu.au",
+        "Department": "Development Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Guy MAYRAZ",
+        "Contact": "guy.mayraz@sydney.edu.au",
+        "Department": "Behavioural Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Rebecca MCKIBBIN",
+        "Contact": "rebecca.mckibbin@sydney.edu.au",
+        "Department": "Health Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Mark MELATOS",
+        "Contact": "mark.melatos@sydney.edu.au",
+        "Department": "International Trade",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "James MORLEY",
+        "Contact": "james.morley@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Kelly NEILL",
+        "Contact": "kelly.neill@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Adrian PAGAN",
+        "Contact": "adrian.pagan@sydney.edu.au",
+        "Department": "Econometrics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Gregor PFEIFER",
+        "Contact": "gregor.pfeifer@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Khanh PHAN",
+        "Contact": "khanh.phan@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Shauna PHILLIPS",
+        "Contact": "shauna.phillips@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Suraj PRASAD",
+        "Contact": "suraj.prasad@sydney.edu.au",
+        "Department": "Microeconomic Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Stefanie SCHURER",
+        "Contact": "stefanie.schurer@sydney.edu.au",
+        "Department": "Health Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Won-Ki SEO",
+        "Contact": "wonki.seo@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Dakyung SEONG",
+        "Contact": "dakyung.seong@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Xuetao SHI",
+        "Contact": "xuetao.shi@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Juliana SILVA GONCALVES",
+        "Contact": "juliana.silvagoncalves@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Aarti SINGH",
+        "Contact": "aarti.singh@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Vladimir SMIRNOV",
+        "Contact": "vladimir.smirnov@sydney.edu.au",
+        "Department": "Microeconomic Theory",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Matthew SMITH",
+        "Contact": "matthew.smith@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Melissa SONG",
+        "Contact": "melissa.song@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Katrien STEVENS",
+        "Contact": "katrien.stevens@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Ellen STUART",
+        "Contact": "ellen.stuart@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Rami TABRI",
+        "Contact": "rami.tabri@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Rebecca TAYLOR",
+        "Contact": "rebecca.taylor@sydney.edu.au",
+        "Department": "Environmental and Resource Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Russell TOTH",
+        "Contact": "russell.toth@sydney.edu.au",
+        "Department": "Development Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Vladimir TYAZHELNIKOV",
+        "Contact": "vladimir.tyazhelnikov@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Agnieszka TYMULA",
+        "Contact": "agnieszka.tymula@sydney.edu.au",
+        "Department": "Experimental Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "David UBILAVA",
+        "Contact": "david.ubilava@sydney.edu.au",
+        "Department": "Agricultural Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Jordi VIDAL ROBERT",
+        "Contact": "jordi.vidalrobert@sydney.edu.au",
+        "Department": "Economic History",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Marian VIDAL-FERNANDEZ",
+        "Contact": "marian.vidal-fernandez@sydney.edu.au",
+        "Department": "Labour Economics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "Huy VU",
+        "Contact": "huy.vu@sydney.edu.au",
+        "Department": "Macroeconomics",
+        "Campus": "Camperdown/Darlington"
+    },
+    {
+        "Employee": "IKM Mokhtarul WADUD",
+        "Contact": "mokhtarul.wadud@sydney.edu.au",
+        "Department": "Applied Econometrics",
+        "Campus": "Camperdown/Darlington"
+    }
+]

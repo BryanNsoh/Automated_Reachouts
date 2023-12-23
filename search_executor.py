@@ -27,7 +27,7 @@ class SearchExecutor:
         }
 
     def perform_search(self, professor_record: Dict) -> Dict:
-        for i in range(1, 2):  # replace 2 with 6
+        for i in range(1, 4):  # replace 2 with 6
             search_key = f"Search_{i}"
             result_key = f"Result_{i}"
             if search_key in professor_record:
@@ -53,7 +53,7 @@ class SearchExecutor:
             response.raise_for_status()
             response = json.loads(response.text)
             response = response["choices"][0]["message"]["content"]
-            print(response)
+            print(response)  # For debugging
             return response
         except requests.RequestException as e:
             print(f"Error: {e}")

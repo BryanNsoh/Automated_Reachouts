@@ -2,6 +2,13 @@ from __future__ import print_function
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 from markdown2 import markdown
+import json
+
+# Read API keys
+key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
+with open(key_path) as f:
+    api_keys = json.load(f)
+    BREVO_API_KEY = api_keys["BREVO_API_KEY"]
 
 
 class BrevoEmailSender:
@@ -15,12 +22,12 @@ class BrevoEmailSender:
     def send_email(self, markdown_data):
         for item in markdown_data:
             if item.get("Sent", 0) == 0:
-                email = item.get("Email")
+                Contact = item.get("Contact")
                 markdown_content = self._extract_markdown_content(item)
                 html_content = markdown(markdown_content)
 
-                sender = {"email": "mamboanye6@gmail.com"}
-                to = [{"email": email}]
+                sender = {"email": "info@mamboanye.com"}
+                to = [{"email": Contact}]
                 subject = "Your Email Subject"
                 send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
                     to=to, html_content=html_content, sender=sender, subject=subject
@@ -37,24 +44,46 @@ class BrevoEmailSender:
 
     def _extract_markdown_content(self, data_item):
         markdown_content = ""
-        for i in range(1, 6):
-            search_key = f"Search_{i}"
-            result_key = f"Result_{i}"
-            if search_key in data_item and result_key in data_item:
-                markdown_content += (
-                    f"### {data_item[search_key]}\n{data_item[result_key]}\n\n"
-                )
+        # extract markdown content from data_item dictionary with key "Email_To_Send"
+        markdown_content = data_item.get("Email_To_Send", None)
         return markdown_content
 
 
 if __name__ == "__main__":
-    brevo_email_sender = BrevoEmailSender("YOUR_BREVO_API_KEY")
+    brevo_email_sender = BrevoEmailSender(BREVO_API_KEY)
 
     markdown_data = [
         # Sample data structure
         {
-            "Email": "example@example.com",
-            "Search_1": "Topic 1",
+            "Contact": "bnsoh2@huskers.unl.edu",
+            "Email_To_Send": """# Sample Markdown
+
+            ## Introduction
+            This is a *sample* markdown document to illustrate various markdown features.
+
+            ### Features
+
+            1. **Headers**: Used for structuring content.
+            2. **Lists**: Can be ordered (numbered) or unordered (bullets).
+
+            ## Formatting
+
+            - *Italics* are great for emphasis.
+            - **Bold** makes your point clear.
+            - `Code` format is used for inline code.
+
+            ## Links and Images
+
+            - Visit [OpenAI](https://www.openai.com) for more information.
+            - Display images using `![alt text](image_url)` syntax.
+
+            ## Code Blocks
+
+            ```python
+            # Python code example
+            def hello_world():
+                print("Hello, world!")
+            """,
             "Result_1": "Content 1",
             "Sent": 0,
         },
