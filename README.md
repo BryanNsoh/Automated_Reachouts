@@ -48,7 +48,6 @@ Automated Reachouts is a comprehensive system designed to automate academic outr
 
 ## Components
 
-- `copy_all_code.py`: Copies Python file contents into a single text file.
 - `email_crafter.py`: Generates and refines email drafts.
 - `email_sender.py`: Sends emails using markdown content.
 - `main.py`: Main script orchestrating the entire process.
