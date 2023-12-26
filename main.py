@@ -59,14 +59,22 @@ def main():
         print("Queries executed for", updated_record["Employee"])
 
         # Craft email
-        email_body = email_crafter.craft_email(student_info, updated_record)
-        email_sender.send_email(email_body)
-        updated_record["Email_To_Send"] = email_body
+        email_data = email_crafter.craft_email(student_info, updated_record)
+        email_body = email_data["body"]
+        subject_line = email_data["subject"]
 
-        # print(email_body)
-        print("Email crafted for", updated_record["Employee"])
+        email_to_send = {
+            "Contact": updated_record["Contact"],
+            "Email_To_Send": email_body,
+            "Subject": subject_line,
+            "Sent": 0,
+        }
+
+        email_sender.send_email([email_to_send])  # Send the email with the subject line
 
         # Update database
+        full_email_content = f"Subject: {subject_line}\n\n{email_body}"
+        updated_record["Email_To_Send"] = full_email_content
         data_handler.update_database(updated_record)
 
 

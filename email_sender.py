@@ -19,14 +19,13 @@ class BrevoEmailSender:
             sib_api_v3_sdk.ApiClient(configuration)
         )
 
-    def send_email(self, markdown_data):
-        for item in markdown_data:
+    def send_email(self, html_data):
+        for item in html_data:
             if item.get("Sent", 0) == 0:
                 Contact = item.get("Contact")
-                markdown_content = self._extract_markdown_content(item)
-                html_content = markdown(markdown_content)
+                html_content = item.get("Email_To_Send", "")
 
-                sender = {"email": "info@mamboanye.com"}
+                sender = {"email": "mamboanye6@gmail.com"}
                 to = [{"email": Contact}]
                 subject = "Your Email Subject"
                 send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
@@ -55,34 +54,31 @@ if __name__ == "__main__":
     markdown_data = [
         # Sample data structure
         {
-            "Contact": "bnsoh2@huskers.unl.edu",
-            "Email_To_Send": """# Sample Markdown
+            "Contact": "bryan.anye.5@gmail.com",
+            "Email_To_Send": """
+            <!DOCTYPE html>
+            <html>
+            <head>
+            </head>
+            <body>
+                <p>Dear Professor XXXX,</p>
 
-            ## Introduction
-            This is a *sample* markdown document to illustrate various markdown features.
+                <p>My name is Raman Dutt, a graduate of XXXX University <a href="http://www.example.com">insert URL</a>. <strong>I am currently working</strong> as a research associate at HITI Lab <a href="http://www.example.com">insert URL</a> at Emory University with Professor A <a href="http://www.example.com">insert URL</a> and Professor B <a href="http://www.example.com">insert URL</a>. <strong>My research includes applications of deep learning for medical image analysis, with a special focus on domain adaptation and transfer learning</strong> . I have read your <strong>intriguing work</strong> on medical image analysis (such as <a href="http://www.example.com">URL</a> and <a href="http://www.example.com">URL</a>) and <strong>I am highly motivated to pursue</strong> an MS/ PhD in Artificial Intelligence. Here are a few questions -</p>
+                
+                <ul>
+                    <li>Are you looking for new graduate students for Fall'21?</li>
+                    <li>Which department should I apply to be able to best work in your lab?</li>
+                    <li>What qualities/ skills do you prefer in a student?</li>
+                </ul>
 
-            ### Features
+                <p><strong>I've attached my resume</strong> to give you more information about my background.</p>
 
-            1. **Headers**: Used for structuring content.
-            2. **Lists**: Can be ordered (numbered) or unordered (bullets).
+                <p>Thank you for your consideration!</p>
 
-            ## Formatting
+                <p>Sincerely,<br>Raman Dutt <a href="http://www.example.com">URL to personal website/ Google scholar/ Github/ etc</a></p>
+            </body>
+            </html>
 
-            - *Italics* are great for emphasis.
-            - **Bold** makes your point clear.
-            - `Code` format is used for inline code.
-
-            ## Links and Images
-
-            - Visit [OpenAI](https://www.openai.com) for more information.
-            - Display images using `![alt text](image_url)` syntax.
-
-            ## Code Blocks
-
-            ```python
-            # Python code example
-            def hello_world():
-                print("Hello, world!")
             """,
             "Result_1": "Content 1",
             "Sent": 0,

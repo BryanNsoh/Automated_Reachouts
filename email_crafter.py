@@ -1,6 +1,6 @@
 from typing import Dict
 import google.generativeai as genai
-from prompts import student_email_advice, professor_email_advice
+from prompts import student_email_advice, professor_email_advice, subject_line_advice
 import json
 
 
@@ -16,8 +16,27 @@ class EmailCrafter:
         # Generating the email using the Gemini Pro model
         return self.model.generate_content(prompt)
 
-        # Generating the email using the Gemini Pro model
-        return self.model.generate_content(prompt)
+    def generate_subject_line(
+        self, email_body: str, student_info: Dict, professor_info: Dict
+    ) -> str:
+        # Craft a subject line based on email content and other information
+        subject_prompt = (
+            f"Craft five alternative concise and relevant email subject lines based on the following email body, student information, and professor information. \n"
+            f"Email Body: {email_body}\n"
+            f"Student Information: {json.dumps(student_info)}\n"
+            f"Professor Information: {json.dumps(professor_info)}\n"
+            f"Guidelines for subject line: {subject_line_advice}\n"
+        )
+        subject_lines = self.model.generate_content(subject_prompt)
+
+        selection_prompt = (
+            f"Return the single best subject line for the email body from the following options. \n"
+            f"Email Body: {email_body}\n"
+            f"Subject Lines: {subject_lines.text}\n"
+        )
+        subject_line = self.model.generate_content(selection_prompt)
+
+        return subject_line.text
 
     def craft_email(self, student_info: Dict, professor_info: Dict) -> str:
         # Prompt 1: Student generates the initial email draft
@@ -51,4 +70,10 @@ class EmailCrafter:
         refined_email = self.generate_email(prompt_3)
         print("Refined email:", refined_email.text)
 
-        return refined_email.text
+        # Generate subject line for the email
+        subject_line = self.generate_subject_line(
+            refined_email.text, student_info, professor_info
+        )
+
+        # Return both the email body and subject line
+        return {"body": refined_email.text, "subject": subject_line}

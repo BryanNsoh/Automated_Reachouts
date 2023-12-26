@@ -171,3 +171,19 @@ As an experienced research professor, your task is to provide concise, actionabl
 
 Student's email:
 """
+
+subject_line_advice = """Be Concise: Keep the subject line short and to the point. Aim for no more than 50 characters to ensure that the entire subject line is visible on mobile devices.
+
+                        Be Specific: Indicate your main purpose or area of interest. Vague subject lines are less likely to capture attention.
+
+                        Personalize: If possible, include the professor's area of expertise or a relevant keyword from their research to show that the email is tailored to them.
+
+                        Convey Urgency or Relevance: Including time-sensitive words like "Inquiry for Fall 2023 Research Position" can prompt quicker opening.
+
+                        Highlight Unique Value or Interest: Mention something that could set you apart, like a particular skill or achievement relevant to the professor's work.
+
+                        Avoid Spam Triggers: Stay away from overly salesy language or all caps, which can make your email seem like spam.
+
+                        Use Proper Formatting: Proper capitalization and grammar show professionalism and respect for the recipient.
+
+                        Test for Clarity: Ensure that someone unfamiliar with your situation would understand the gist of your email from the subject line alone."""

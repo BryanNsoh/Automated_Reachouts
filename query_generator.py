@@ -52,7 +52,7 @@ class QueryGenerator:
         queries = [
             f"What are the key research areas and contributions of {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}?",
             f"Identify and summarize the top 3 research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
-            f"List and provide detailed summaries of the top 5 most cited papers by {professor_info['Employee']} from {professor_info['Campus']}, highlighting their significance in the academic community.",
+            f"List and provide detailed summaries of the top 5 most cited papers by {professor_info['Employee']} from {professor_info['Campus']}, highlighting their significance in the academic community. Provide URLs to the papers as well as their titles.",
         ]
 
         # Assuming there are no existing search queries in the professor_info
