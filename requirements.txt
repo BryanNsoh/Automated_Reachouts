@@ -1,0 +1,7 @@
+
+pandas
+sqlite3
+sib_api_v3_sdk
+markdown2
+requests
+google.generativeai

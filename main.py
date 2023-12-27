@@ -67,6 +67,7 @@ def main():
             "Contact": updated_record["Contact"],
             "Email_To_Send": email_body,
             "Subject": subject_line,
+            "Attachment_Path": r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\Coding Projects\Automated_Reachouts\Mambo_resume.pdf",
             "Sent": 0,
         }
 

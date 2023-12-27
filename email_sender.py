@@ -1,8 +1,8 @@
 from __future__ import print_function
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
-from markdown2 import markdown
 import json
+import base64
 
 # Read API keys
 key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
@@ -22,14 +22,30 @@ class BrevoEmailSender:
     def send_email(self, html_data):
         for item in html_data:
             if item.get("Sent", 0) == 0:
-                Contact = item.get("Contact")
+                contact = item.get("Contact")
                 html_content = item.get("Email_To_Send", "")
-
+                subject = item.get("Subject", "")
                 sender = {"email": "mamboanye6@gmail.com"}
-                to = [{"email": Contact}]
-                subject = "Your Email Subject"
+                to = [{"email": contact}]
+                attachments = []
+
+                # Check for attachment
+                if "Attachment_Path" in item:
+                    with open(item["Attachment_Path"], "rb") as file:
+                        encoded_string = base64.b64encode(file.read()).decode("utf-8")
+                        attachments.append(
+                            {
+                                "content": encoded_string,
+                                "name": item["Attachment_Path"].split("/")[-1],
+                            }
+                        )
+
                 send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
-                    to=to, html_content=html_content, sender=sender, subject=subject
+                    to=to,
+                    html_content=html_content,
+                    sender=sender,
+                    subject=subject,
+                    attachment=attachments,
                 )
 
                 try:
@@ -41,17 +57,11 @@ class BrevoEmailSender:
                         "Exception when calling SMTPApi->send_transac_email: %s\n" % e
                     )
 
-    def _extract_markdown_content(self, data_item):
-        markdown_content = ""
-        # extract markdown content from data_item dictionary with key "Email_To_Send"
-        markdown_content = data_item.get("Email_To_Send", None)
-        return markdown_content
-
 
 if __name__ == "__main__":
     brevo_email_sender = BrevoEmailSender(BREVO_API_KEY)
 
-    markdown_data = [
+    html_email = [
         # Sample data structure
         {
             "Contact": "bryan.anye.5@gmail.com",
@@ -80,13 +90,13 @@ if __name__ == "__main__":
             </html>
 
             """,
-            "Result_1": "Content 1",
+            "Subject": "Inquiry: Leveraging AI for Medical Imaging Breakthroughs - Fall 2023",
             "Sent": 0,
-        },
-        # Add more items as needed...
+            "Attachment_Path": r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\Coding Projects\Automated_Reachouts\Mambo_resume.pdf",
+        }
     ]
 
-    brevo_email_sender.send_email(markdown_data)
+    brevo_email_sender.send_email(html_email)
 
-    # Print updated markdown_data to check 'Sent' status
-    print("Updated Data: ", markdown_data)
+    # Print updated html_smail to check 'Sent' status
+    print("Updated Data: ", html_email)
