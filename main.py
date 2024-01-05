@@ -1,5 +1,5 @@
 import json
-from professor_data_handler import ProfessorDataHandler, DatabaseSetupManager
+from professor_data_handler import ProfessorDataHandler
 from query_generator import QueryGenerator
 from search_executor import SearchExecutor
 from email_crafter import EmailCrafter
@@ -34,12 +34,9 @@ def main():
     gemini_model = genai.GenerativeModel("gemini-pro")
 
     # Initialize the DatabaseSetupManager and set up the database path
-    db_manager = DatabaseSetupManager("professors_db_template.db")
-    db_path = db_manager.select_or_create_database_folder()
-
-    # Initialize ProfessorDataHandler with the new database path
     table_name = "professors"
-    data_handler = ProfessorDataHandler(str(db_path), table_name)
+    db_template_path = "professors_db_template.db"
+    data_handler = ProfessorDataHandler(db_template_path, table_name)
 
     # Initialize other classes
     query_gen = QueryGenerator(gemini_model)
@@ -48,7 +45,8 @@ def main():
     email_sender = BrevoEmailSender(BREVO_API_KEY)
 
     # Process each professor record
-    professor_records = data_handler.read_professor_data()
+    professor_records, db_path = data_handler.setup_database()
+    print
     professor_records = [x for x in professor_records if x.get("Sent", 0) == 0]
 
     for record in professor_records:
@@ -76,7 +74,8 @@ def main():
         # Update database
         full_email_content = f"Subject: {subject_line}\n\n{email_body}"
         updated_record["Email_To_Send"] = full_email_content
-        data_handler.update_database(updated_record)
+        updated_record["Sent"] = 1
+        data_handler.update_database(updated_record, db_path)
 
 
 if __name__ == "__main__":

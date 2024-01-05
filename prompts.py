@@ -1,3 +1,6 @@
+# Template source: https://www.reddit.com/r/gradadmissions/comments/oeabbf/the_az_of_contacting_professors_for_graduate/
+
+
 # Information about the student
 student_info = {
     "Name": "Mary Mambo",
@@ -173,7 +176,7 @@ student_email_advice = """Email Template for Reaching Out to Professors
                             <body>
                                 <p>Dear Professor XXXX,</p>
 
-                                <p>My name is Raman Dutt, a graduate of XXXX University <a href="http://www.example.com">insert URL</a>. <strong>I am currently working</strong> as a research associate at HITI Lab <a href="http://www.example.com">insert URL</a> at Emory University with Professor A <a href="http://www.example.com">insert URL</a> and Professor B <a href="http://www.example.com">insert URL</a>. <strong>My research includes applications of deep learning for medical image analysis, with a special focus on domain adaptation and transfer learning</strong> . I have read your <strong>intriguing work</strong> on medical image analysis (such as <a href="http://www.example.com">URL</a> and <a href="http://www.example.com">URL</a>) and <strong>I am highly motivated to pursue</strong> an MS/ PhD in Artificial Intelligence. Here are a few questions -</p>
+                                <p>My name is Raman Dutt, a graduate of XXXX University. <strong>I am currently working</strong> as a research associate at HITI Lab  at Emory University with Professor A  and Professor B. <strong>My research includes applications of deep learning for medical image analysis, with a special focus on domain adaptation and transfer learning</strong> . I have read your <strong>intriguing work</strong> on medical image analysis (such as  example ...) and <strong>I am highly motivated to pursue</strong> an MS/ PhD in Artificial Intelligence. Here are a few questions -</p>
                                 
                                 <ul>
                                     <li>Are you looking for new graduate students for Fall'21?</li>
@@ -185,7 +188,7 @@ student_email_advice = """Email Template for Reaching Out to Professors
 
                                 <p>Thank you for your consideration!</p>
 
-                                <p>Sincerely,<br>Raman Dutt <a href="http://www.example.com">URL to personal website/ Google scholar/ Github/ etc</a></p>
+                                <p>Sincerely,<br>Raman Dutt </p>
                             </body>
                             </html>
                             
@@ -193,7 +196,7 @@ student_email_advice = """Email Template for Reaching Out to Professors
                 """
 
 professor_email_advice = """
-As an experienced research professor, your task is to provide concise, actionable feedback on a student's email draft. Focus primarily on areas of improvement that can increase the likelihood of a positive response from another professor. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message. Your insights should guide the student in refining their approach to be more effective and impactful. Be bluntly and brutally honest, as well as constructive. The email will be in HTML format.
+As an experienced research professor, your task is to provide concise, actionable feedback on a student's email draft. Focus primarily on areas of improvement that can increase the likelihood of a positive response from another professor. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message. Your insights should guide the student in refining their approach to be more effective and impactful. Be bluntly and brutally honest, as well as constructive. Check wether or not the email contains irrelevant urls or placeholders. The email will be in HTML format.
 
 Student's email:
 """
@@ -212,4 +215,6 @@ subject_line_advice = """Be Concise: Keep the subject line short and to the poin
 
                         Use Proper Formatting: Proper capitalization and grammar show professionalism and respect for the recipient.
 
-                        Test for Clarity: Ensure that someone unfamiliar with your situation would understand the gist of your email from the subject line alone."""
+                        Test for Clarity: Ensure that someone unfamiliar with your situation would understand the gist of your email from the subject line alone.
+                        
+                        Provide all 5 subject lines in a single line separated by commas. For example: Subject Line 1, Subject Line 2, Subject Line 3, Subject Line 4, Subject Line 5"""

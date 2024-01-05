@@ -51,8 +51,8 @@ class QueryGenerator:
         # Append predefined queries to the professor_info dictionary
         queries = [
             f"What are the key research areas and contributions of {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}?",
-            f"Identify and summarize the top 3 research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
-            f"List and provide detailed summaries of the top 5 most cited papers by {professor_info['Employee']} from {professor_info['Campus']}, highlighting their significance in the academic community. Provide URLs to the papers as well as their titles.",
+            f"Search for and summarize research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
+            f"Search for and provide detailed summaries of publications by {professor_info['Employee']} from {professor_info['Campus']}. Provide URLs to the works as well as their titles if available.",
         ]
 
         # Assuming there are no existing search queries in the professor_info

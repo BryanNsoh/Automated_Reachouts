@@ -30,11 +30,13 @@ class EmailCrafter:
         subject_lines = self.model.generate_content(subject_prompt)
 
         selection_prompt = (
-            f"Return the single best subject line for the email body from the following options. \n"
+            f"Return the single best subject line verbatim  for the email body from the following options. \n"
             f"Email Body: {email_body}\n"
             f"Subject Lines: {subject_lines.text}\n"
         )
         subject_line = self.model.generate_content(selection_prompt)
+
+        print("Subject line:", subject_line.text)
 
         return subject_line.text
 
@@ -46,7 +48,7 @@ class EmailCrafter:
             f"Professor Information: {professor_info.get('Employee', 'N/A')}, {professor_info.get('Position', 'N/A')}, {professor_info.get('Department', 'N/A')}\n"
             f"Search Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
             f"Student advice: {student_email_advice}\n"
-            f"Email (formatted in HTML):\n"
+            f"Email (formatted in HTML. Do-not include any placeholders or urls.):\n"
         )
 
         initial_draft = self.generate_email(prompt_1)
@@ -65,7 +67,7 @@ class EmailCrafter:
             f"Student Email:{initial_draft.text}\n"
             f"Searched Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
             "NB: This is the final email that will be sent to the professor. Do not include any comments, placeholders or notes. Do the best with what you have."
-            "Refined Email(formatted in HTML):"
+            "Refined Email(formatted in HTML. Do-not include any placeholders or urls.):"
         )
         refined_email = self.generate_email(prompt_3)
         print("Refined email:", refined_email.text)

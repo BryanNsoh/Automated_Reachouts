@@ -36,7 +36,7 @@ class BrevoEmailSender:
                         attachments.append(
                             {
                                 "content": encoded_string,
-                                "name": item["Attachment_Path"].split("/")[-1],
+                                "name": "Mambo-Mary-Resume.pdf",
                             }
                         )
 

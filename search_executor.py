@@ -46,6 +46,7 @@ class SearchExecutor:
                 },
                 {"role": "user", "content": query},
             ],
+            "max_tokens": 2000,  # Adjust this value as needed for longer responses
         }
         try:
             # Use the headers from the class attribute
