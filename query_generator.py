@@ -1,41 +1,35 @@
 import json
 from typing import Dict
-import google.generativeai as genai
+from api_handler import (
+    LLM_APIHandler,
+)  # Assuming this is the correct import path for LLM_APIHandler
 
 
 class QueryGenerator:
-    def __init__(self, google_api_key: str):
-        self.google_api_key = google_api_key
+    def __init__(self, llm_handler: LLM_APIHandler):
+        self.llm_handler = llm_handler
 
     def generate_search_queries(self, student_info: Dict, professor_info: Dict) -> Dict:
-        # Configure the Google Gemini Pro model
-        genai.configure(api_key=self.google_api_key)
-        model = genai.GenerativeModel("gemini-pro")
-
         previous_queries = []
         for i in range(1, 6):
             # Join previous queries into a single string
-            # Check if previous_queries is empty
-            if previous_queries:
-                all_previous_queries = ", ".join(previous_queries)
-            else:
-                all_previous_queries = ""
+            all_previous_queries = (
+                ", ".join(previous_queries) if previous_queries else ""
+            )
 
             prompt = self._prepare_prompt(
                 student_info, professor_info, all_previous_queries
             )
-            response = model.generate_content(prompt)
-            print(f"Query {i}: {response.text}")
-            professor_info[f"Search_{i}"] = response.text
-            previous_queries.append(response.text)
+            response = self.llm_handler.generate_content(prompt, model_choice="gemini")
+            print(f"Query {i}: {response['choices'][0]['message']['content']}")
+            professor_info[f"Search_{i}"] = response["choices"][0]["message"]["content"]
+            previous_queries.append(response["choices"][0]["message"]["content"])
 
         return professor_info
 
-    def _generate_new_query(
+    def _prepare_prompt(
         self, student_info: Dict, professor_info: Dict, previous_queries: str
     ) -> str:
-        # Construct prompt based on student and professor info, including all previous queries
-        print("professor_info", professor_info)
         prompt = (
             f"Professor Info: {json.dumps(professor_info)}\n"
             f"Previous Queries: {previous_queries}\n"
@@ -48,14 +42,12 @@ class QueryGenerator:
         return prompt
 
     def use_predefined_query(self, professor_info: Dict) -> Dict:
-        # Append predefined queries to the professor_info dictionary
         queries = [
             f"What are the key research areas and contributions of {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}?",
             f"Search for and summarize research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
             f"Search for and provide detailed summaries of publications by {professor_info['Employee']} from {professor_info['Campus']}. Provide URLs to the works as well as their titles if available.",
         ]
 
-        # Assuming there are no existing search queries in the professor_info
         for i, query in enumerate(queries, start=1):
             professor_info[f"Search_{i}"] = query
 

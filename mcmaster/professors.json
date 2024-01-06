@@ -1,0 +1,810 @@
+[
+    {
+        "Employee": "Zemel, Hanna",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "zemelh@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sweetman, Arthur",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "sweetman@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Demidova, Svetlana",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "demidova@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Guindon, Emmanuel",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "guindoe@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "MacKinnon, James",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "mackinnj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Wen, Jean-Fran\u00e7ois",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "wenjf@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Amster, Ellen",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "amstere@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ibhawoh, Bonny",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "ibhawoh@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Schwartz, Lisa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "schwartl@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Herring, Ann",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "herring@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mulvale, Gillian",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "mulvale@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Tan, Netina",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "netina.tan@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Bird, Karen",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "kbird@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Graefe, Peter",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "graefep@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "McBride, Stephen",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "mcbride@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "O'Brien, Robert",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "obrienr@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Veall, Michael",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "veall@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Hubley, Anita M.",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "hubleya@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Johnson, David",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "johnsdav@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dooley, Martin D.",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "dooleym@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "DeCicca, Philip",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "decicca@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Handa, Amita",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "handaa@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Abelson, Julia",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "abelsonj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Baumann, Andrea",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "baumanna@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Braedley, Susan",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "braedley@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dunn, James",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "dunnj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "McLaughlin, Neil",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "mclaugh@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Fetner, Tina",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "fetner@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Denis, Jeffrey",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "denisj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Cranford, Cynthia",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "cranforc@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kaida, Lisa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "kaidal@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Moffat, Tina",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "moffat@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Marano, Lisa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "maranol@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Prowse, Tracy",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "prowset@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Brickley, Megan",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "brickley@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Gardner Barber, Pauline",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "gardnerp@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Bouchier, Nancy",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "bouchier@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "York, Lorraine",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "yorkl@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Coleman, Daniel",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "colemand@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Brophy, Sarah",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "brophys@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dean, Amber",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "deana@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Hladki, Janice",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "hladki@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Chakraborty, Chandrima",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "English and Cultural Studies",
+        "Contact": "chakrc@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ryan, Ellen",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "eryan@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Grenier, Amanda",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "greniea@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Rosenberg, Mark",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health, Aging and Society",
+        "Contact": "rosenb@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Holmes, Hannah",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "holmesh@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dooley, Martin",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "dooley@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Johri, Alok",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "johria@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Porter, Tony",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "portera@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "McLaughlin, Neil",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "mclaugn@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Young, Marisa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "youngm@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Reitz, Jeffrey",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "reitzj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Satzewich, Vic",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "satzewic@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Heath, Melanie",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "heathml@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Cook, Nancy",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Sociology",
+        "Contact": "cookn@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Balcom, Karen",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "History",
+        "Contact": "balcomk@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Swett, Pamela",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "History",
+        "Contact": "swettp@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Krantzberg, Gail",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Engineering and Public Policy",
+        "Contact": "krantz@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Arain, Altaf",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "School of Earth, Environment & Society",
+        "Contact": "arainm@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Carey, Sean",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "School of Earth, Environment & Society",
+        "Contact": "careysc@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Waddington, Mike",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "School of Earth, Environment & Society",
+        "Contact": "wadding@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Baetz, Brian",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Civil Engineering",
+        "Contact": "baetz@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dion, Michelle",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "dionm@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Boothe, Katherine",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Political Science",
+        "Contact": "boothe@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Hurley, Jeremiah",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "hurley@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Schwartz, Lisa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health Policy and Management",
+        "Contact": "schwart@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Brander, James N.",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "brander@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Acharya, Anand",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "acharya@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Johnson, David",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Economics",
+        "Contact": "johnsond@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Gafni, Amiram",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Health Research Methods, Evidence, and Impact",
+        "Contact": "",
+        "Sent": 0
+    },
+    {
+        "Employee": "Chikanda, Abel",
+        "Position": "Associate Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "abel_chikanda@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Coulibaly, Paulin",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "couliba@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Gonsamo, Alemu",
+        "Position": "Assistant Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "gonsamoa@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kim, Sang-Tae",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "sangtae@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ljubicic, Gita",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "gita.ljubicic@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mercier, Michael",
+        "Position": "Assistant Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "mercieme@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mills, Suzanne",
+        "Position": "Associate Professor",
+        "Campus": "Main Campus",
+        "Department": "Labour Studies",
+        "Contact": "smills@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Narro P\u00e9rez, Rodrigo",
+        "Position": "Assistant Teaching Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "narrora@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Newbold, Bruce",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "newbold@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Padden, Maureen",
+        "Position": "Associate Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "paddenm@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Paez, Antonio",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "paezha@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Papangelakis, Elli",
+        "Position": "Assistant Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "papangee@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Peace, Alexander",
+        "Position": "Assistant Professor",
+        "Campus": "Main Campus",
+        "Department": "Urban and Regional Planning",
+        "Contact": "peacea2@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joseph, Ameil",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Social Work",
+        "Contact": "josepha@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Schormans, Ann Fudge",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Social Work",
+        "Contact": "fudgea@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Northwood, Melissa",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Social Work",
+        "Contact": "northwm@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Baker Collins, Stephanie",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Social Work",
+        "Contact": "bakercs@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Carter, Tristan",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "cartert@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dodson, Belinda",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "dodsonb@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Cook, Katherine",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "Anthropology",
+        "Contact": "cookka@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Wilson, Jean",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "wilsonj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Karpinski, Eva",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "karpine@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dhavernas, Catherine",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "dhavern@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Khoury, Joseph",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "khouryj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Poupeney Hart, Catherine",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "poupeney@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Miraglia, Anne-Marie",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "miraglia@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Warren, Jean-Philippe",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "French",
+        "Contact": "warrenj@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Frager, Ruth",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "History",
+        "Contact": "frager@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "Freeman, Bonnie",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "History",
+        "Contact": "freemab@mcmaster.ca",
+        "Sent": 0
+    },
+    {
+        "Employee": "O'Connor, Mary",
+        "Position": "Professor",
+        "Campus": "Main Campus",
+        "Department": "History",
+        "Contact": "oconnor@mcmaster.ca",
+        "Sent": 0
+    }
+]

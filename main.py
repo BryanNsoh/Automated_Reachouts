@@ -5,7 +5,7 @@ from search_executor import SearchExecutor
 from email_crafter import EmailCrafter
 from email_sender import BrevoEmailSender
 from prompts import student_info
-import google.generativeai as genai
+from api_handler import LLM_APIHandler
 
 
 def main():
@@ -21,17 +21,17 @@ def main():
         6. Updates the database with the modified professor record.
     """
 
+    model_choice = "gemini-pro"  # Choose between "gemini-pro" and "gpt-3.5"
+
     # Read API keys
     key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
     with open(key_path) as f:
         api_keys = json.load(f)
-        GEMINI_API_KEY = api_keys["GEMINI_API_KEY"]
         PERPLEXITY_API_KEY = api_keys["PERPLEXITY_API_KEY"]
         BREVO_API_KEY = api_keys["BREVO_API_KEY"]
 
-    # Initialize the Google Gemini Pro model
-    genai.configure(api_key=GEMINI_API_KEY)
-    gemini_model = genai.GenerativeModel("gemini-pro")
+    # Initialize the API handler
+    llm_handler = LLM_APIHandler(key_path)
 
     # Initialize the DatabaseSetupManager and set up the database path
     table_name = "professors"
@@ -39,9 +39,9 @@ def main():
     data_handler = ProfessorDataHandler(db_template_path, table_name)
 
     # Initialize other classes
-    query_gen = QueryGenerator(gemini_model)
+    query_gen = QueryGenerator(llm_handler)
     search_exec = SearchExecutor(PERPLEXITY_API_KEY)
-    email_crafter = EmailCrafter(gemini_model)
+    email_crafter = EmailCrafter(llm_handler)
     email_sender = BrevoEmailSender(BREVO_API_KEY)
 
     # Process each professor record
@@ -57,7 +57,9 @@ def main():
         print("Queries executed for", updated_record["Employee"])
 
         # Craft email
-        email_data = email_crafter.craft_email(student_info, updated_record)
+        email_data = email_crafter.craft_email(
+            student_info, updated_record, model_choice
+        )
         email_body = email_data["body"]
         subject_line = email_data["subject"]
 
