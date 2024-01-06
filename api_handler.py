@@ -1,8 +1,11 @@
 import openai
+from openai import OpenAI  # Import for the updated client
 import google.generativeai as genai
 from retry import retry
 import json
 import logging
+import os
+import time
 
 # Logger setup
 logging.basicConfig(level=logging.INFO)
@@ -11,8 +14,9 @@ logging.basicConfig(level=logging.INFO)
 class LLM_APIHandler:
     def __init__(self, key_path):
         self.load_api_keys(key_path)
-        openai.api_key = self.openai_api_key
+        self.openai_client = OpenAI(api_key=self.openai_api_key)
         genai.configure(api_key=self.gemini_api_key)
+        self.request_timestamps = []  # List to keep track of request timestamps
 
     def load_api_keys(self, key_path):
         with open(key_path, "r") as file:
@@ -20,20 +24,18 @@ class LLM_APIHandler:
             self.gemini_api_key = api_keys["GEMINI_API_KEY"]
             self.openai_api_key = api_keys["OPENAI_API_KEY"]
 
-    @retry(tries=5, delay=1, backoff=2)
-    def generate_openai_content(self, prompt, model="gpt-3.5"):
+    def generate_openai_content(self, prompt, model="gpt-3.5-turbo"):
+        self.check_rate_limit()  # Check and handle the rate limit
         try:
-            response = openai.ChatCompletion.create(
+            completion = self.openai_client.completions.create(
                 model=model,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "Address the provided query fully and directly. Obeying all instuctions.",
-                    },
-                    {"role": "user", "content": prompt},
-                ],
+                prompt=prompt,
+                max_tokens=150,
             )
-            return response
+            self.request_timestamps.append(
+                time.time()
+            )  # Log the timestamp of the request
+            return completion.choices[0].text
         except Exception as e:
             logging.error(f"Error in OpenAI API call: {e}")
             raise
@@ -47,13 +49,24 @@ class LLM_APIHandler:
             logging.error(f"Error in Gemini API call: {e}")
             raise
 
-    def generate_content(self, prompt, model_choice="gemini"):
-        if model_choice == "openai":
+    def generate_content(self, prompt, model_choice="gemini-pro"):
+        if model_choice == "gpt-3.5-turbo":
             return self.generate_openai_content(prompt)
-        elif model_choice == "gemini":
+        elif model_choice == "gemini-pro":
             return self.generate_gemini_content(prompt)
         else:
-            raise ValueError("Invalid model choice. Choose 'openai' or 'gemini'.")
+            raise ValueError(
+                "Invalid model choice. Choose 'gpt-3.5-turbo' or 'gemini-pro'."
+            )
+
+    def check_rate_limit(self):
+        while len(self.request_timestamps) >= 3:
+            if time.time() - self.request_timestamps[0] > 60:
+                self.request_timestamps.pop(0)  # Remove the oldest timestamp
+            else:
+                time.sleep(
+                    60 - (time.time() - self.request_timestamps[0])
+                )  # Wait if rate limit is reached
 
 
 # Example usage
@@ -62,10 +75,10 @@ if __name__ == "__main__":
     handler = LLM_APIHandler(key_path)
 
     # Example prompt
-    prompt = "Write a short story about a wizard."
-    model_choice = "gemini"  # Can be 'openai' or 'gemini'
+    prompt = "Write a short story about a sad, defeated wizard in a word perpetually drowned in cloying red mists that tasted of beetroots and saltwater."
+    model_choice = "gemini-pro"  # Can be 'openai' or 'gemini'
     try:
         response = handler.generate_content(prompt, model_choice)
-        print(response)
+        print(response.text)
     except Exception as e:
         logging.error(f"Failed to generate content: {e}")

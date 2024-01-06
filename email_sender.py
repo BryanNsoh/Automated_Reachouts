@@ -1,8 +1,13 @@
 from __future__ import print_function
-import sib_api_v3_sdk
-from sib_api_v3_sdk.rest import ApiException
+import pytz
 import json
 import base64
+import hashlib
+from datetime import datetime, timedelta, timezone
+from utils import get_utc_scheduled_time
+
+import sib_api_v3_sdk
+from sib_api_v3_sdk.rest import ApiException
 
 # Read API keys
 key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
@@ -19,7 +24,23 @@ class BrevoEmailSender:
             sib_api_v3_sdk.ApiClient(configuration)
         )
 
-    def send_email(self, html_data):
+    def send_email(self, html_data, scheduled_time=None, batch_id=None):
+        # Generate batchId based on scheduled time if not provided
+        if scheduled_time:
+            # Assume scheduled_time is in UTC and in RFC3339 format
+            utc_scheduled_time = datetime.fromisoformat(scheduled_time).replace(
+                tzinfo=timezone.utc
+            )
+
+            if datetime.now(timezone.utc) + timedelta(hours=72) < utc_scheduled_time:
+                raise ValueError("Scheduled time must be within 72 hours from now")
+            if datetime.now(timezone.utc) > utc_scheduled_time:
+                raise ValueError("Scheduled time must be in the future")
+            if not batch_id:
+                batch_id = hashlib.md5(
+                    utc_scheduled_time.isoformat().encode()
+                ).hexdigest()
+
         for item in html_data:
             if item.get("Sent", 0) == 0:
                 contact = item.get("Contact")
@@ -27,30 +48,38 @@ class BrevoEmailSender:
                 subject = item.get("Subject", "")
                 sender = {"email": "mamboanye6@gmail.com"}
                 to = [{"email": contact}]
-                attachments = []
+                attachment = []
 
-                # Check for attachment
+                # Attachment handling
                 if "Attachment_Path" in item:
                     with open(item["Attachment_Path"], "rb") as file:
                         encoded_string = base64.b64encode(file.read()).decode("utf-8")
-                        attachments.append(
+                        attachment.append(
                             {
                                 "content": encoded_string,
                                 "name": "Mambo-Mary-Resume.pdf",
                             }
                         )
 
+                # Create SendSmtpEmail object
                 send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
                     to=to,
                     html_content=html_content,
                     sender=sender,
                     subject=subject,
-                    attachment=attachments,
+                    attachment=attachment,
                 )
 
+                # Set scheduledAt and batchId if provided
+                if scheduled_time:
+                    send_smtp_email.scheduled_at = scheduled_time
+                if batch_id:
+                    send_smtp_email.batch_id = batch_id
+
+                # Send email
                 try:
                     api_response = self.api_instance.send_transac_email(send_smtp_email)
-                    print("Email sent successfully: ", api_response)
+                    print("Email scheduled successfully: ", api_response)
                     item["Sent"] = 1  # Update 'Sent' status on success
                 except ApiException as e:
                     print(
@@ -96,7 +125,9 @@ if __name__ == "__main__":
         }
     ]
 
-    brevo_email_sender.send_email(html_email)
+    # To schedule an email for 8 AM on January 6, 2024 in Ontario, Canada
+    utc_scheduled_time = get_utc_scheduled_time(6, "America/Chicago", 2024, 1, 11, 5)
+    brevo_email_sender.send_email(html_email, utc_scheduled_time)
 
     # Print updated html_smail to check 'Sent' status
     print("Updated Data: ", html_email)

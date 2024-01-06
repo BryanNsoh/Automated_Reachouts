@@ -6,6 +6,9 @@ from email_crafter import EmailCrafter
 from email_sender import BrevoEmailSender
 from prompts import student_info
 from api_handler import LLM_APIHandler
+from utils import get_utc_scheduled_time
+
+from datetime import datetime, timedelta, timezone
 
 
 def main():
@@ -21,7 +24,8 @@ def main():
         6. Updates the database with the modified professor record.
     """
 
-    model_choice = "gemini-pro"  # Choose between "gemini-pro" and "gpt-3.5"
+    model_choice = "gemini-pro"  # Choose between "gemini-pro" and "gpt-3.5-turbo"
+    # model_choice = "gpt-3.5-turbo"  # Choose between "gemini-pro" and "gpt-3.5-turbo"
 
     # Read API keys
     key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
@@ -71,7 +75,17 @@ def main():
             "Sent": 0,
         }
 
-        email_sender.send_email([email_to_send])  # Send the email with the subject line
+        # specify the day and timezone. email is always sent at 8am
+        utc_scheduled_time = get_utc_scheduled_time(9, "America/Toronto")
+
+        # set scheduled time to 2 minutes from now for testing
+        # utc_scheduled_time = datetime.now(timezone.utc) + timedelta(
+        #   minutes=2
+        # )  # set scheduled time to 2 minutes from now for testing
+
+        email_sender.send_email(
+            [email_to_send], utc_scheduled_time
+        )  # Send the email with the subject line
 
         # Update database
         full_email_content = f"Subject: {subject_line}\n\n{email_body}"

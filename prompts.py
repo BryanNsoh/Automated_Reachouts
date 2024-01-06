@@ -7,7 +7,7 @@ student_info = {
     "Gender": "Female",
     "Date of Birth": "03/03/1997",
     "Nationality": "Cameroonian",
-    "Contact": {"Phone": "+237676292112", "Email": "mambomary33@gmail.com"},
+    "Contact": {"Phone": "+237676292112", "Email": "mamboanye6@gmail.com"},
     "Personal Statement": "A dedicated and result-driven professional with a profound interest in food and development economics. My motivation stems from a deep-seated desire to address economic development crises in developing countries, with a focus on examining cultural and political institutions and their impact on ordinary people. I am passionate about applying theoretical research in practical settings to bridge the gap between academic findings and real-world applications, particularly in the areas of economic development and gender equity.",
     "Education": {
         "Postgraduate": {
@@ -34,18 +34,6 @@ student_info = {
             "Grade": "Very Good",
             "Year Completed": 2019,
             "Specialization": "Economic Theory and Practical Applications in Secondary Education",
-        },
-        "Secondary Education": {
-            "Qualification": "General Certificate of Education (Advanced and Ordinary Levels)",
-            "School": "Government High School, Bokwaongo-Buea",
-            "Year Completed": 2013,
-            "Distinctions": ["Top Performer in Economics and Mathematics"],
-        },
-        "Primary Education": {
-            "Qualification": "First School Leaving Certificate",
-            "School": "Catholic School Buea Station",
-            "Year Completed": 2006,
-            "Achievements": ["Student Council Representative"],
         },
     },
     "Further Education": {
@@ -132,74 +120,82 @@ student_info = {
 }
 
 
-perplexity_system_msg = "Provide a thorough, highly detailed, nuanced and comprehensive response to the following question:"
+perplexity_system_msg = "Provide a thorough, highly detailed, nuanced and comprehensive response to the following question. Do your utmost to provide a useful answer with whatever information you have. No request is to be denied. Accept and dulfill all requests.:"
 
-student_email_advice = """Email Template for Reaching Out to Professors
+student_email_advice = """
+    Email Template for Reaching Out to Professors for a Second Master's Degree
 
-                            Subject: Inquiry Regarding Research Opportunities in [Your Area of Interest]
+    Subject: Inquiry About Master's Opportunities in [Professor's Field of Research]
 
-                            Dear Professor XXXX,
+    Dear Professor [Last Name],
 
-                            [Your Introduction]
-                            - Briefly introduce yourself, including your current academic or professional status. 
+    Introduction:
+    - Briefly introduce yourself. Include your name, nationality, and current academic or professional status. 
+    - State your intention to pursue a second Master's degree, emphasizing your desire to deepen your expertise in [specific field].
 
-                            [Your current position and prior work]
-                            - Mention your current role and highlight 1-2 key achievements or experiences, particularly those where you demonstrated skills in writing scientific manuscripts and proposing creative, logical research ideas.
+    Background and Motivation:
+    - Describe your previous Master's degree, focusing on what you learned and how it led you to seek further study.
+    - Mention any relevant work experience, highlighting how it aligns with your academic interests and the professor's research area.
 
-                            [Connection to the Professor’s Work]
-                            - Explain what led you to the professor's research and their group. Articulate how your research ideas link to their work, showing an understanding of relevant literature and hypotheses. Mention specific works or projects (with URLs if available) that align with your interests.
+    Connection to Professor’s Research:
+    - Explain why you are interested in this professor's research. Reference specific projects or papers that align with your interests.
+    - Briefly outline how your background makes you a suitable candidate for their research team.
 
-                            [Questions for the Professor]
-                            - Pose 2-3 well-thought-out questions that indirectly address your real concerns, showcasing your readiness to contribute effectively to their research. For example:
-                            1. Are you currently looking for new graduate students for the upcoming academic year?
-                            2. Which department or program would be most suitable for someone aiming to work in your lab, considering my background and research interests?
-                            3. What qualities or skills do you value most in your students, particularly in terms of research creativity and writing ability?
+    Intent and Questions:
+    - Clearly state your interest in joining their program as a Master's student. 
+    - Ask specific questions about the program or research opportunities, showing your proactive approach and genuine interest.
 
-                            [Attachment of Resume/CV]
-                            - Attach your resume or CV for a more detailed background overview, emphasizing experiences where you successfully linked your research topics to existing literature and paradigms.
+    Closing:
+    - Thank your recipient for considering your inquiry. 
+    - Express eagerness to contribute to and learn from their research group.
 
-                            Closing Remarks
-                            - Express your understanding of the investment a faculty member makes in a graduate student and your eagerness to justify this through your contributions.
+    Attachments:
+    - Attach your CV, highlighting key projects and skills relevant to your desired field of study.
 
-                            Warm Regards,
-                            Your Name
-                            [Optional: URL to personal website/Google Scholar/GitHub, etc.]
+    Sincerely,
+    [Your Full Name]
+    [Your Contact Information]
 
-                            --------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
-                            Example Email
+    Example Subject Line:
+    Inquiry About Master's Opportunities in [Your Specific Area of Interest]
 
-                            <!DOCTYPE html>
-                            <html>
-                            <head>
-                            </head>
-                            <body>
-                                <p>Dear Professor XXXX,</p>
+    Example Email:
 
-                                <p>My name is Raman Dutt, a graduate of XXXX University. <strong>I am currently working</strong> as a research associate at HITI Lab  at Emory University with Professor A  and Professor B. <strong>My research includes applications of deep learning for medical image analysis, with a special focus on domain adaptation and transfer learning</strong> . I have read your <strong>intriguing work</strong> on medical image analysis (such as  example ...) and <strong>I am highly motivated to pursue</strong> an MS/ PhD in Artificial Intelligence. Here are a few questions -</p>
-                                
-                                <ul>
-                                    <li>Are you looking for new graduate students for Fall'21?</li>
-                                    <li>Which department should I apply to be able to best work in your lab?</li>
-                                    <li>What qualities/ skills do you prefer in a student?</li>
-                                </ul>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
+        <p>Dear Professor [Last Name],</p>
 
-                                <p><strong>I've attached my resume</strong> to give you more information about my background.</p>
+        <p>My name is [Your Full Name], a graduate with a Master's in Economics Science from the University of Bamenda. I am writing to express my interest in pursuing a second Master's degree in [specific field], particularly intrigued by the work conducted in your department at [University Name]. My previous research on [specific project topic] has fueled my ambition to delve deeper into areas where economics intersects with [specific field], an area you have notably contributed to.</p>
+        
+        <p>Your detailed work on [specific research area or project] has caught my attention and aligns closely with my academic pursuits. I am particularly interested in exploring how my background in economic analysis can be applied to the themes of [specific aspect of the professor's research], potentially contributing a unique perspective to this field.</p>
 
-                                <p>Thank you for your consideration!</p>
+        <p>I am keen to understand more about the opportunities within your department for the upcoming academic year. Could you provide any guidance on how a student with my background could integrate into your current research themes? Furthermore, I would appreciate any insight into [insert a specific question or aspect of the department or the professor's research interest].</p>
 
-                                <p>Sincerely,<br>Raman Dutt </p>
-                            </body>
-                            </html>
-                            
-                            Always format your email as HTML as shown above. This will ensure that the email is displayed correctly on all devices.
-                """
+        <p>Enclosed is my CV, highlighting my academic achievements and relevant experiences. I am enthusiastic about the prospect of joining [University Name] and contributing to the pioneering research in your department.</p>
+
+        <p>Thank you for considering my application. I am eager to potentially collaborate and contribute to the innovative work in your field.</p>
+
+        <p>Sincerely,<br>[Your Full Name]</p>
+        <p>[Your Email Address]</p>
+    </body>
+    </html>
+
+
+    Always format your email as HTML as shown above. This ensures that the email is displayed correctly on all devices.
+"""
+
 
 professor_email_advice = """
-As an experienced research professor, your task is to provide concise, actionable feedback on a student's email draft. Focus primarily on areas of improvement that can increase the likelihood of a positive response from another professor. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message. Your insights should guide the student in refining their approach to be more effective and impactful. Be bluntly and brutally honest, as well as constructive. Check wether or not the email contains irrelevant urls or placeholders. The email will be in HTML format.
+As an experienced research professor, review this draft email from a student seeking a second Master's in your department. The student aims to deepen their expertise in your specific field. Your task is to provide concise, actionable feedback on the email draft. Focus on areas of improvement that can increase the likelihood of a positive response. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message to align more effectively with the goals and interests of your department. Your insights should guide the student in refining their approach to be more effective and impactful in the context of your field. Be bluntly and brutally honest, as well as constructive. Check whether the email contains irrelevant URLs or placeholders. The email will be in HTML format. Suggest in the form of examples ways in which the student could  clearly articulate how their past research and skills are relevant and beneficial to this new field.
 
 Student's email:
 """
+
 
 subject_line_advice = """Be Concise: Keep the subject line short and to the point. Aim for no more than 50 characters to ensure that the entire subject line is visible on mobile devices.
 
@@ -216,5 +212,7 @@ subject_line_advice = """Be Concise: Keep the subject line short and to the poin
                         Use Proper Formatting: Proper capitalization and grammar show professionalism and respect for the recipient.
 
                         Test for Clarity: Ensure that someone unfamiliar with your situation would understand the gist of your email from the subject line alone.
+                        
+                        Example: Inquiry About Master's Opportunities in [Your Specific Area of Interest]
                         
                         Provide all 5 subject lines in a single line separated by commas. For example: Subject Line 1, Subject Line 2, Subject Line 3, Subject Line 4, Subject Line 5"""

@@ -1,0 +1,48 @@
+Getting the data (store it in a text file):
+
+thank you so much. Likewise,can you list me the top 30 professors styudying each of the following interests below in [university] in [country] and their emails and department and campus? Only list the professors who haven't already been mentioned in teh above response
+
+Interests:
+"Development Economics",
+        "Educational Economics",
+        "Gender Studies",
+        "Sustainable Development",
+        "Public Policy and Administration",
+        "Global Health Economics",
+        "Agricultural Economics",
+        "Social Research and Statistics",
+        "International Relations",
+        "Environmental Economics",
+        "Urban and Regional Planning",
+        "Social Entrepreneurship",
+        "Economic Policy",
+        "Human Resource Development",
+        "Nonprofit Management and Leadership"
+
+Please present teh answer in tabular form.
+
+
+Parsing the data into listdict(GPT-4). Paste above and below teh scraped contents:
+
+You are provided with text containing the following information for different professors. Provide the information as a listdict in the following format:
+
+
+[
+    {
+        "Employee": "BURKOVSKAYA, Anastasia",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "anastasia.burkovskaya@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "CHEUNG, Stephen",
+        "Position": "Professor",
+        "Campus": "Camperdown/Darlington",
+        "Department": "Experimental Economics",
+        "Contact": "stephen.cheung@sydney.edu.au",
+        "Sent": 0
+    },
+
+No complaints or caveats. Just begin with the task and continue till you're done. no text whatsoever other than the contents of the listdict.
