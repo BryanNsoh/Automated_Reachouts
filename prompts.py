@@ -153,8 +153,8 @@ student_email_advice = """
     - Attach your CV, highlighting key projects and skills relevant to your desired field of study.
 
     Sincerely,
-    [Your Full Name]
-    [Your Contact Information]
+    Mambo-Mary Anye Ndzong
+    mamboanye6@gmail.com
 
     --------------------------------------------------------------------------------
 
@@ -180,8 +180,9 @@ student_email_advice = """
 
         <p>Thank you for considering my application. I am eager to potentially collaborate and contribute to the innovative work in your field.</p>
 
-        <p>Sincerely,<br>[Your Full Name]</p>
-        <p>[Your Email Address]</p>
+        <p>Sincerely,<br>Mambo-Mary Anye Ndzong</p>
+        <p>Email: <a href="mailto:mamboanye6@gmail.com">mamboanye6@gmail.com</a></p>
+
     </body>
     </html>
 

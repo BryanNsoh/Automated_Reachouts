@@ -50,7 +50,7 @@ class EmailCrafter:
     ) -> Dict:
         # Prompt 1: Student generates the initial email draft
         prompt_1 = (
-            f"You are the student, Mary Mambo, reaching out to a professor. \n"
+            f"You are the student, Mary Mambo, reaching out to a professor for an opportunity in Summer 2024. \n"
             f"Student Information: {json.dumps(student_info)}\n"
             f"Professor Information: {professor_info.get('Employee', 'N/A')}, {professor_info.get('Position', 'N/A')}, {professor_info.get('Department', 'N/A')}\n"
             f"Key Reason for Second Master's: To deepen expertise and gain comprehensive research experience in {professor_info.get('Department', 'N/A')}, addressing gaps from previous Master's program and building specific skills relevant to {professor_info.get('Department', 'N/A')}'s field.\n"
@@ -73,7 +73,7 @@ class EmailCrafter:
             f"Student advice: {student_email_advice}\n"
             f"Original Student Email:{initial_draft}\n"
             f"Searched Results: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
-            "NB: This is the final email that will be sent to the professor. Be concise and specific in your reasons for choosing this department and how it aligns with your academic journey. Do not include any comments, placeholders or notes. \n"
+            "NB: This is the final email that will be sent to the professor. Be concise and specific in your reasons for choosing the department and how it aligns with your academic journey. Do not include any comments, placeholders or notes. \n"
             "Refined Email (formatted in HTML. Do not include any placeholders or urls.):"
         )
 

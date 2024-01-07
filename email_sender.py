@@ -115,6 +115,8 @@ if __name__ == "__main__":
                 <p>Thank you for your consideration!</p>
 
                 <p>Sincerely,<br>Raman Dutt <a href="http://www.example.com">URL to personal website/ Google scholar/ Github/ etc</a></p>
+                <p>Email: <a href="mailto:mamboanye6@gmail.com">mamboanye6@gmail.com</a></p>
+
             </body>
             </html>
 
@@ -126,7 +128,7 @@ if __name__ == "__main__":
     ]
 
     # To schedule an email for 8 AM on January 6, 2024 in Ontario, Canada
-    utc_scheduled_time = get_utc_scheduled_time(6, "America/Chicago", 2024, 1, 11, 5)
+    utc_scheduled_time = get_utc_scheduled_time(6, "America/Chicago", 2024, 1, 19, 52)
     brevo_email_sender.send_email(html_email, utc_scheduled_time)
 
     # Print updated html_smail to check 'Sent' status
