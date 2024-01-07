@@ -168,7 +168,7 @@ student_email_advice = """
     <head>
     </head>
     <body>
-        <p>Dear Professor [Last Name],</p>
+        <p>Dear Professor [Professor's Last Name],</p>
 
         <p>My name is [Your Full Name], a graduate with a Master's in Economics Science from the University of Bamenda. I am writing to express my interest in pursuing a second Master's degree in [specific field], particularly intrigued by the work conducted in your department at [University Name]. My previous research on [specific project topic] has fueled my ambition to delve deeper into areas where economics intersects with [specific field], an area you have notably contributed to.</p>
         
@@ -187,12 +187,18 @@ student_email_advice = """
     </html>
 
 
-    Always format your email as HTML as shown above. This ensures that the email is displayed correctly on all devices.
+    Always format your email as HTML as shown above. This ensures that the email is displayed correctly on all devices. 
 """
 
 
 professor_email_advice = """
-As an experienced research professor, review this draft email from a student seeking a second Master's in your department. The student aims to deepen their expertise in your specific field. Your task is to provide concise, actionable feedback on the email draft. Focus on areas of improvement that can increase the likelihood of a positive response. Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message to align more effectively with the goals and interests of your department. Your insights should guide the student in refining their approach to be more effective and impactful in the context of your field. Be bluntly and brutally honest, as well as constructive. Check whether the email contains irrelevant URLs or placeholders. The email will be in HTML format. Suggest in the form of examples ways in which the student could  clearly articulate how their past research and skills are relevant and beneficial to this new field.
+As an experienced research professor, review this draft email from a student seeking a second Master's in your department. The student aims to deepen their expertise in your specific field. 
+Your task is to provide concise, actionable feedback on the email draft. Focus on areas of improvement that can increase the likelihood of a positive response. 
+Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message to align more effectively with the goals and interests of your department. 
+Your insights should guide the student in refining their approach to be more effective and impactful in the context of your field. Be bluntly and brutally honest, as well as constructive. 
+Check whether the email contains irrelevant URLs or placeholders. The email will be in HTML format. 
+Suggest in the form of examples ways in which the student could  clearly articulate how their past research and skills are relevant and beneficial to this new field.
+Finally, rewrite the email CONCISELY in such a way as to address all the points raised above.
 
 Student's email:
 """

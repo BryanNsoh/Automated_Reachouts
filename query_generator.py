@@ -45,7 +45,7 @@ class QueryGenerator:
         queries = [
             f"What are the key research areas and contributions of {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}?",
             f"Search for and summarize research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
-            f"Search for and provide detailed summaries of publications by {professor_info['Employee']} from {professor_info['Campus']}. Provide URLs to the works as well as their titles if available.",
+            f"Search for and provide detailed summaries of publications by {professor_info['Employee']} from {professor_info['Campus']}.",
         ]
 
         for i, query in enumerate(queries, start=1):
