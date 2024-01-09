@@ -11,10 +11,28 @@ class EmailCrafter:
     def __init__(self, llm_handler):
         self.llm_handler = llm_handler
 
-    def generate_email(self, prompt: str, model_choice: str) -> str:
+    def generate_text(self, prompt: str, model_choice: str) -> str:
         # Generating the email using the chosen model via LLM_APIHandler
         response = self.llm_handler.generate_content(prompt, model_choice)
         return response.text
+
+    def create_insightful_story(
+        self, student_info: Dict, professor_info: Dict, model_choice: str
+    ) -> str:
+        insightful_story_prompt = (
+            f"You are Mary Mambo, an anglophone educator and econimist from Cameroon reflecting on your life story and your motivation to pursue a second master's degree in {professor_info.get('Department', 'N/A')}. "
+            f"Consider the cultural and linguistic dynamics you navigated, both personally and professionally. "
+            f"Using the information: {json.dumps(student_info)} and {json.dumps(professor_info)}, "
+            f"link your experiences to a deep interest in {professor_info.get('Department', 'N/A')}. "
+            f"Particularly focus on how the socio-political climate of Cameroon, your educational background, the specifics of your upbringing and your specific teaching experiences "
+            f"have uniquely positioned you to contribute to and benefit from working with {professor_info.get('Employee', 'N/A')}, "
+            f"known for their work in {professor_info.get('Department', 'N/A')}. "
+            f"Provide the details of your life that highlight these connections, ensuring it resonates authentically with both your and the professor's profiles."
+            f"You are liscensed to be creative and imaginative. Create specific events that reference real places and events in cameroon within the bounds of plausibility.\n"
+        )
+        story = self.generate_text(insightful_story_prompt, model_choice)
+        print("\nStory:", story)
+        return story
 
     def generate_subject_line(
         self,
@@ -32,14 +50,14 @@ class EmailCrafter:
             f"Guidelines for subject line: {subject_line_advice}\n"
         )
 
-        subject_lines = self.generate_email(subject_prompt, model_choice)
+        subject_lines = self.generate_text(subject_prompt, model_choice)
 
         selection_prompt = (
             f"Return the single best subject line verbatim for the email body from the following options. \n"
             f"Email Body: {email_body}\n"
             f"Subject Lines: {subject_lines}\n"
         )
-        subject_line = self.generate_email(selection_prompt, model_choice)
+        subject_line = self.generate_text(selection_prompt, model_choice)
 
         print("Subject line:", subject_line)
 
@@ -48,23 +66,26 @@ class EmailCrafter:
     def craft_email(
         self, student_info: Dict, professor_info: Dict, model_choice: str
     ) -> Dict:
+        # Generate the student's insightful story
+        story = self.create_insightful_story(student_info, professor_info, model_choice)
+
         # Prompt 1: Student generates the initial email draft
         prompt_1 = (
             f"You are the student, Mary Mambo, reaching out to a professor for an opportunity in Summer 2024. \n"
             f"Your Information: {json.dumps(student_info)}\n"
             f"Professor Contact: {professor_info.get('Employee', 'N/A')}, {professor_info.get('Position', 'N/A')}, {professor_info.get('Department', 'N/A')}\n"
-            f"Key Reason for Second Master's: To deepen expertise and gain comprehensive research experience in {professor_info.get('Department', 'N/A')}, addressing gaps from previous Master's program and building specific skills relevant to {professor_info.get('Department', 'N/A')}'s field.\n"
+            f"Key Reason for Second Master's: {story}\n"
             f"Professor Information: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
             f"Important Advice: {student_email_advice}\n"
             f"Email (formatted in HTML. Do not include any placeholders or urls.):\n"
         )
 
-        initial_draft = self.generate_email(prompt_1, model_choice)
+        initial_draft = self.generate_text(prompt_1, model_choice)
         print("Initial draft:", initial_draft)
 
         # Prompt 2: Professor reviews the draft and provides feedback
         prompt_2 = f"{professor_email_advice} \n\n{initial_draft}\n"
-        professor_feedback = self.generate_email(prompt_2, model_choice)
+        professor_feedback = self.generate_text(prompt_2, model_choice)
         print("Professor feedback:", professor_feedback)
 
         prompt_3 = (
@@ -77,7 +98,7 @@ class EmailCrafter:
             "Final refined Email (formatted in HTML. Do not include any placeholders or urls. MAKE IT CONCISE.):"
         )
 
-        refined_email = self.generate_email(prompt_3, model_choice)
+        refined_email = self.generate_text(prompt_3, model_choice)
         print("Refined email:", refined_email)
 
         # Generate subject line for the email

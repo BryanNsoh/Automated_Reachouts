@@ -14,6 +14,7 @@ key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents
 with open(key_path) as f:
     api_keys = json.load(f)
     BREVO_API_KEY = api_keys["BREVO_API_KEY"]
+    
 
 
 class BrevoEmailSender:

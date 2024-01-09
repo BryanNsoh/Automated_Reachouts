@@ -19,7 +19,7 @@ Interests:
         "Human Resource Development",
         "Nonprofit Management and Leadership"
 
-Please present teh answer in tabular form.
+Please present the answer in tabular form.
 
 
 Parsing the data into listdict(GPT-4). Paste above and below teh scraped contents:
@@ -29,20 +29,20 @@ You are provided with text containing the following information for different pr
 
 [
     {
-        "Employee": "BURKOVSKAYA, Anastasia",
+        "Employee": "Anastasia BURKOVSKAYA",
         "Position": "Professor",
-        "Campus": "Camperdown/Darlington",
+        "Campus": "University of Sydney, Camperdown/Darlington",
         "Department": "Macroeconomics",
         "Contact": "anastasia.burkovskaya@sydney.edu.au",
         "Sent": 0
     },
     {
-        "Employee": "CHEUNG, Stephen",
+        "Employee": "Stephen CHEUNG",
         "Position": "Professor",
-        "Campus": "Camperdown/Darlington",
+        "Campus": "University of Sydney, Camperdown/Darlington",
         "Department": "Experimental Economics",
         "Contact": "stephen.cheung@sydney.edu.au",
         "Sent": 0
     },
 
-No complaints or caveats. Just begin with the task and continue till you're done. no text whatsoever other than the contents of the listdict.
+No complaints or caveats. Just begin with the task and continue till you're done. no text whatsoever other than the contents of the listdict (in json codeblock). Provide only non-duplicate entries. stop when all entries have been provided in json.

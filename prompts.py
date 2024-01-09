@@ -223,3 +223,6 @@ subject_line_advice = """Be Concise: Keep the subject line short and to the poin
                         Example: Inquiry About Master's Opportunities in [Your Specific Area of Interest]
                         
                         Provide all 5 subject lines in a single line separated by commas. For example: Subject Line 1, Subject Line 2, Subject Line 3, Subject Line 4, Subject Line 5"""
+
+
+backstory_prompt = """You are a student, Mary Mambo, reaching out to a professor for an opportunity in Summer 2024."""

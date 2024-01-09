@@ -24,13 +24,12 @@ class LLM_APIHandler:
             self.gemini_api_key = api_keys["GEMINI_API_KEY"]
             self.openai_api_key = api_keys["OPENAI_API_KEY"]
 
-    def generate_openai_content(self, prompt, model="gpt-3.5-turbo"):
+    def generate_openai_content(self, prompt, model="gpt-3.5-turbo-1106"):
         self.check_rate_limit()  # Check and handle the rate limit
         try:
             completion = self.openai_client.completions.create(
                 model=model,
                 prompt=prompt,
-                max_tokens=150,
             )
             self.request_timestamps.append(
                 time.time()
@@ -76,7 +75,7 @@ if __name__ == "__main__":
 
     # Example prompt
     prompt = "Write a short story about a sad, defeated wizard in a word perpetually drowned in cloying red mists that tasted of beetroots and saltwater."
-    model_choice = "gemini-pro"  # Can be 'openai' or 'gemini'
+    model_choice = "gpt-3.5-turbo"  # Can be 'openai' or 'gemini-pro'
     try:
         response = handler.generate_content(prompt, model_choice)
         print(response.text)
