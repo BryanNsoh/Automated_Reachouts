@@ -53,6 +53,8 @@ def main():
     print
     professor_records = [x for x in professor_records if x.get("Sent", 0) == 0]
 
+    count = 0
+
     for record in professor_records:
         # Get and execute search queries
         updated_record = query_gen.use_predefined_query(record)
@@ -76,12 +78,12 @@ def main():
         }
 
         # specify the day and timezone. email is always sent at 8am
-        utc_scheduled_time = get_utc_scheduled_time(9, "America/Toronto")
-
-        # set scheduled time to 2 minutes from now for testing
-        # utc_scheduled_time = datetime.now(timezone.utc) + timedelta(
-        #   minutes=2
-        # )  # set scheduled time to 2 minutes from now for testing
+        # call the function, increment the minute by 1 for every 5 counts the loop goes through, reset to 0 after 30 minutes
+        count += 1
+        additional_minutes = (count // 5) % 6  # Resets to 0 after reaching 30 minutes
+        utc_scheduled_time = get_utc_scheduled_time(
+            10, "America/Chicago", 2024, 1, 8, additional_minutes
+        )
 
         email_sender.send_email(
             [email_to_send], utc_scheduled_time

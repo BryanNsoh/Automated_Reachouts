@@ -43,9 +43,9 @@ class QueryGenerator:
 
     def use_predefined_query(self, professor_info: Dict) -> Dict:
         queries = [
-            f"What are the key research areas and contributions of {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}?",
-            f"Search for and summarize research interests of {professor_info['Employee']} at {professor_info['Campus']}, focusing on their impact and relevance in their field.",
-            f"Search for and provide detailed summaries of publications by {professor_info['Employee']} from {professor_info['Campus']}.",
+            f"Key research areas, contributions, and interests of Professor {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}. Provide all the details you find at length.",
+            f"Publications by {professor_info['Employee']} from {professor_info['Campus']}. Provide all the details you find at length.",
+            f"{professor_info['Department']} department at {professor_info['Campus']}. Provide all the details you find at length.",
         ]
 
         for i, query in enumerate(queries, start=1):

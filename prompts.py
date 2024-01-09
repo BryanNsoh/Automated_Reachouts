@@ -19,6 +19,10 @@ student_info = {
                 "Analysis of Microeconomic Trends in Cameroon",
                 "Development of Sustainable Economic Models for Rural Communities",
             ],
+            "Dissertation": {
+                "Title": "The Role of Women Empowerment in Cameroon's Economic Development; Evidence from some selected Self Help Groups",
+                "Synopsis": "Explores the relationship between women's empowerment and economic development in Cameroon, incorporating educational, economic, and social dimensions. Uses quantitative and qualitative methodologies to analyze how empowerment influences women's participation in various economic sectors and its correlation with economic growth.",
+            },
         },
         "Undergraduate": {
             "Degree": "BSc Economics Science",
@@ -51,6 +55,10 @@ student_info = {
                 "Planned and executed innovative Economics, Mathematics, and Management lessons, incorporating technology and interactive learning techniques.",
                 "Developed and adopted various teaching methods tailored to diverse learning styles, resulting in a 15% increase in student engagement and academic performance.",
                 "Enhanced social abilities and learning skills among students through mentorship programs and extracurricular activities.",
+                "Implemented targeted teaching strategies aligned with the Competence Based Approach, resulting in a 75% improvement in overall academic performance in the General Certificate of Education exam.",
+                "Established an Economics Club to enhance students' interest and understanding of economic concepts, witnessing a 45% increase in active participation and knowledge retention.",
+                "Organized regular math salons to provide additional support for students, leading to a 25% decrease in the number of students struggling with mathematical concepts.",
+                "Pioneered the Integration of climate justice themes into the curriculum, achieving a 30% rise in students' awareness and engagement in environmental issues.",
             ],
         },
         {
@@ -60,6 +68,11 @@ student_info = {
             "Responsibilities": [
                 "Oversaw technical planning, supervision, and monitoring of public awareness campaigns focused on gender-based violence, reaching over 1,000 community members.",
                 "Coordinated effectively with municipalities, local authorities, and beneficiaries in the Nguti community to implement sustainable livelihood programs.",
+                "Implemented training programs that enhanced agricultural skills, training over 100 farmers in Nguti subdivision to grow tomatoes and rear chickens.",
+                "Trained over 75 women from the West Coast subdivision in effective fish drying and commercialization techniques.",
+                "Pioneered the creation of Nguti farmers cooperative and West Coast aqua farmers cooperatives, providing essential resources and equipment.",
+                "Facilitated a 55% improvement in crop yield and productivity in the Nguti farmers cooperative over two years.",
+                "Contributed to a 35% expansion of business ventures for the West Coast aqua farmers cooperative over 14 months.",
             ],
         },
         {
@@ -70,6 +83,9 @@ student_info = {
                 "Played a key role in developing data collection tools such as surveys, which contributed to a 10% improvement in customer targeting strategies.",
                 "Collected and analyzed data to identify consumer trends, providing insights that led to a 5% increase in marketing campaign effectiveness.",
                 "Created detailed graphic representations of data, facilitating better decision-making in marketing strategies.",
+                "Executed targeted social media campaigns, resulting in a 25% increase in online engagement and brand awareness.",
+                "Assisted in the launch of a new service, contributing to a 30% growth in customer adoption within the first quarter of its introduction.",
+                "Participated in the development and execution of a promotional event, resulting in a 35% increase in foot traffic to postal service centers.",
             ],
         },
     ],
