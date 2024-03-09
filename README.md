@@ -1,10 +1,11 @@
-## Automated Reachouts: Streamlining Academic Communication with AI
+## Automated Reachouts: Streamlining Academic Communication with AI-powered Personalization and Factual Grounding
 
-**Automated Reachouts** is a Python-based system that leverages the power of AI to facilitate and streamline communication between students and professors in academic settings. It assists students in crafting personalized and effective emails to professors, seeking guidance, research opportunities, or potential collaborations. 
+**Automated Reachouts** is a Python-based system that leverages the power of AI to facilitate and streamline communication between students and professors in academic settings. It goes beyond simply generating personalized emails by also conducting **web searches using the Perplexity API**. This ensures that each email is grounded in **factual and relevant information** about the professor and their research, significantly increasing the chances of a positive response. 
 
 ### Key Features:
 
 * **AI-powered email crafting:** The system utilizes advanced language models like Google's Gemini and OpenAI's GPT-3.5 to generate personalized email drafts based on student information, professor research interests, and insightful narratives. 
+* **Web search integration:** Leverages the Perplexity API to conduct targeted web searches, gathering relevant information about the professor and their research. This ensures that emails are well-informed and demonstrate genuine interest. 
 * **Database integration:** Manages professor data efficiently using SQLite, allowing for seamless retrieval and updates. 
 * **Automated email sending:** Integrates with Sendinblue's API to send crafted emails to professors at scheduled times. 
 * **Customizable prompts and criteria:** Offers flexibility in tailoring prompts and evaluation criteria to specific needs and preferences. 
@@ -12,18 +13,18 @@
 ### Benefits:
 
 * **Saves time and effort:** Automates the process of crafting and sending emails, freeing up students to focus on other academic tasks. 
-* **Increases outreach effectiveness:** Generates personalized and compelling emails that are more likely to receive positive responses from professors. 
+* **Increases outreach effectiveness:** Generates personalized and compelling emails that are **grounded in factual information**, significantly increasing the likelihood of a positive response from professors. 
 * **Improves communication quality:** Provides feedback and suggestions to refine email drafts, ensuring clarity, conciseness, and professionalism. 
 * **Facilitates research opportunities:** Helps students connect with professors whose research aligns with their interests, potentially opening doors to valuable collaborations. 
 
-### Repository Contents:
+### How Web Search Integration Works:
 
-* **email_crafter.py:** Generates and refines email drafts using AI.
-* **email_sender.py:** Sends emails with markdown content using Sendinblue's API.
-* **main.py:** The main script that orchestrates the entire process.
-* **professor_data_handler.py:** Manages professor data stored in SQLite.
-* **prompts.py:** Contains email templates, advice, and prompts for AI models.
-* **query_generator.py and search_executor.py:** Generate and execute search queries to gather information about professors' research interests. 
+The `query_generator.py` and `search_executor.py` modules work together to:
+
+1. **Generate search queries:** Based on the professor's information and research interests, the system generates targeted search queries aimed at gathering relevant and detailed information. 
+2. **Execute queries and retrieve results:** These queries are then executed using the Perplexity API, and the retrieved results are incorporated into the email draft. 
+
+This ensures that the email content is not only personalized but also demonstrates the student's genuine interest and understanding of the professor's work. 
 
 ### Installation and Usage:
 
