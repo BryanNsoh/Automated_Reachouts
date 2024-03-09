@@ -1,59 +1,39 @@
+## Automated Reachouts: Streamlining Academic Communication with AI
 
-# Automated Reachouts
+**Automated Reachouts** is a Python-based system that leverages the power of AI to facilitate and streamline communication between students and professors in academic settings. It assists students in crafting personalized and effective emails to professors, seeking guidance, research opportunities, or potential collaborations. 
 
-## Description
-Automated Reachouts is a comprehensive system designed to automate academic outreach and communication. It uses AI to generate personalized emails, catering to students seeking academic guidance or opportunities from professors. The system handles end-to-end email crafting and sending processes, including database interactions and content customization.
+### Key Features:
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Contributing](#contributing)
-- [License](#license)
+* **AI-powered email crafting:** The system utilizes advanced language models like Google's Gemini and OpenAI's GPT-3.5 to generate personalized email drafts based on student information, professor research interests, and insightful narratives. 
+* **Database integration:** Manages professor data efficiently using SQLite, allowing for seamless retrieval and updates. 
+* **Automated email sending:** Integrates with Sendinblue's API to send crafted emails to professors at scheduled times. 
+* **Customizable prompts and criteria:** Offers flexibility in tailoring prompts and evaluation criteria to specific needs and preferences. 
 
-## Installation
+### Benefits:
 
-### Prerequisites
-- Python 3.8 or higher
-- SQLite for database management
-- Google Generative AI and Perplexity AI API keys
-- Sendinblue API key for email transmission
+* **Saves time and effort:** Automates the process of crafting and sending emails, freeing up students to focus on other academic tasks. 
+* **Increases outreach effectiveness:** Generates personalized and compelling emails that are more likely to receive positive responses from professors. 
+* **Improves communication quality:** Provides feedback and suggestions to refine email drafts, ensuring clarity, conciseness, and professionalism. 
+* **Facilitates research opportunities:** Helps students connect with professors whose research aligns with their interests, potentially opening doors to valuable collaborations. 
 
-### Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/Automated-Reachouts.git
-   cd Automated-Reachouts
-   ```
-2. Install required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Configure API keys in the provided JSON file templates.
+### Repository Contents:
 
-## Usage
+* **email_crafter.py:** Generates and refines email drafts using AI.
+* **email_sender.py:** Sends emails with markdown content using Sendinblue's API.
+* **main.py:** The main script that orchestrates the entire process.
+* **professor_data_handler.py:** Manages professor data stored in SQLite.
+* **prompts.py:** Contains email templates, advice, and prompts for AI models.
+* **query_generator.py and search_executor.py:** Generate and execute search queries to gather information about professors' research interests. 
 
-### Steps to Run
-1. Ensure all API keys are set in `api_keys.json`.
-2. Run `main.py` to initiate the process:
-   ```bash
-   python main.py
-   ```
-3. The system will automatically process data, craft emails, and send them.
+### Installation and Usage:
 
-### Components
-- **Email Crafting**: Creates personalized emails using AI.
-- **Data Handling**: Manages professor data and performs database interactions.
-- **Email Transmission**: Sends out crafted emails to professors.
+1. **Clone the repository:** `git clone https://github.com/BryanNsoh/Automated_Reachouts.git`
+2. **Install dependencies:** `pip install -r requirements.txt`
+3. **Configure API keys:** Set your Google Generative AI, Perplexity AI, and Sendinblue API keys in the provided JSON file templates. 
+4. **Run the main script:** `python main.py`
 
-## Components
-
-- `email_crafter.py`: Generates and refines email drafts.
-- `email_sender.py`: Sends emails using markdown content.
-- `main.py`: Main script orchestrating the entire process.
-- `professor_data_handler.py`: Handles professor data stored in SQLite.
-- `prompts.py`: Contains email templates and advice.
-- `query_generator.py` and `search_executor.py`: Manage search queries.
-
-## Contributing
 Contributions and feedback are welcome! 
+
+### License:
+
+This project is licensed under the MIT License. 
