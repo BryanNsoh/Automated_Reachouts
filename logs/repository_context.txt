@@ -1,0 +1,1648 @@
+<repository_structure>
+<directory name="claude-project">
+    <file>
+        <name>Automated_Reachouts..gitignore</name>
+        <path>Automated_Reachouts..gitignore</path>
+        <content>
+*.pdf
+all_python_contents.txt
+copy_all_code.py
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.api_handler.py</name>
+        <path>Automated_Reachouts.api_handler.py</path>
+        <content>
+import openai
+from openai import OpenAI  # Import for the updated client
+import google.generativeai as genai
+from retry import retry
+import json
+import logging
+import os
+import time
+
+# Logger setup
+logging.basicConfig(level=logging.INFO)
+
+
+class LLM_APIHandler:
+    def __init__(self, key_path):
+        self.load_api_keys(key_path)
+        self.openai_client = OpenAI(api_key=self.openai_api_key)
+        genai.configure(api_key=self.gemini_api_key)
+        self.request_timestamps = []  # List to keep track of request timestamps
+
+    def load_api_keys(self, key_path):
+        with open(key_path, "r") as file:
+            api_keys = json.load(file)
+            self.gemini_api_key = api_keys["GEMINI_API_KEY"]
+            self.openai_api_key = api_keys["OPENAI_API_KEY"]
+
+    def generate_openai_content(self, prompt, model="gpt-3.5-turbo-1106"):
+        self.check_rate_limit()  # Check and handle the rate limit
+        try:
+            completion = self.openai_client.completions.create(
+                model=model,
+                prompt=prompt,
+            )
+            self.request_timestamps.append(
+                time.time()
+            )  # Log the timestamp of the request
+            return completion.choices[0].text
+        except Exception as e:
+            logging.error(f"Error in OpenAI API call: {e}")
+            raise
+
+    @retry(tries=5, delay=1, backoff=2)
+    def generate_gemini_content(self, prompt):
+        try:
+            model = genai.GenerativeModel("gemini-pro")
+            return model.generate_content(prompt).text
+        except Exception as e:
+            logging.error(f"Error in Gemini API call: {e}")
+            raise
+
+    def generate_content(self, prompt, model_choice="gemini-pro"):
+        if model_choice == "gpt-3.5-turbo":
+            return self.generate_openai_content(prompt)
+        elif model_choice == "gemini-pro":
+            return self.generate_gemini_content(prompt)
+        else:
+            raise ValueError(
+                "Invalid model choice. Choose 'gpt-3.5-turbo' or 'gemini-pro'."
+            )
+
+    def generate_and_evaluate(self, prompt, criteria, model_choice="gemini-pro"):
+        responses = [self.generate_content(prompt, model_choice) for _ in range(3)]
+        # # print all three responses in an ordered list
+        # print("Response options:")
+        # for i in range(3):
+        #     print(f"{i+1}. {responses[i]}")
+        # print("End of response options.\n\nBest response: ")
+
+        evaluation_prompt = (
+            f"Based on the following criteria: {criteria}, "
+            "evaluate the three responses provided below. "
+            "Return the complete text of the best response verbatim, "
+            "but without including any preceding labels such as 'Response 1.'. "
+            f"Response options:\n1. {responses[0]}\n2. {responses[1]}\n3. {responses[2]}"
+        )
+
+        return self.generate_content(evaluation_prompt, model_choice)
+
+    def check_rate_limit(self):
+        while len(self.request_timestamps) >= 3:
+            if time.time() - self.request_timestamps[0] > 60:
+                self.request_timestamps.pop(0)  # Remove the oldest timestamp
+            else:
+                time.sleep(
+                    60 - (time.time() - self.request_timestamps[0])
+                )  # Wait if rate limit is reached
+
+
+# Example usage
+if __name__ == "__main__":
+    key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"  # Replace with your key file path
+    handler = LLM_APIHandler(key_path)
+
+    # Example prompt and criteria
+    prompt = "Write a short story about a sad, defeated wizard in a world perpetually drowned in cloying red mists that tasted of beetroots and saltwater."
+    criteria = "Select the response that is most imaginative, coherent, and vividly descriptive."
+    model_choice = "gemini-pro"  # Can be 'openai' or 'gemini-pro'
+
+    try:
+        best_response = handler.generate_and_evaluate(prompt, criteria, model_choice)
+        print(best_response)
+    except Exception as e:
+        logging.error(f"Failed to generate content: {e}")
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.Data_scraping_prompts.txt</name>
+        <path>Automated_Reachouts.Data_scraping_prompts.txt</path>
+        <content>
+Getting the data (store it in a text file):
+
+thank you so much. Likewise,can you list me the top 30 professors styudying each of the following interests below in [university] in [country] and their emails and department and campus? Only list the professors who haven't already been mentioned in teh above response
+
+Interests:
+	"Development Economics",
+ 	"Agricultural Economics",
+        "Educational Economics",
+        "Gender Studies",
+        "Sustainable Development",
+        "Public Policy and Administration",
+        "Social Research and Statistics",
+        "International Relations",
+        "Environmental Economics",
+        "Economic Policy",
+        "Human Resource Development",
+
+
+Please present the answer in tabular form.
+
+
+--------------------------------------------------------------------------------------------------------
+
+Parsing the data into listdict(GPT-4). Paste above and below teh scraped contents:
+
+You are provided with text containing the following information for different professors. Provide the information as a listdict in the following format:
+
+
+[
+    {
+        "Employee": "Anastasia BURKOVSKAYA",
+        "Position": "Professor",
+        "Campus": "University of Sydney, Camperdown/Darlington",
+        "Department": "Macroeconomics",
+        "Contact": "anastasia.burkovskaya@sydney.edu.au",
+        "Sent": 0
+    },
+    {
+        "Employee": "Stephen CHEUNG",
+        "Position": "Professor",
+        "Campus": "University of Sydney, Camperdown/Darlington",
+        "Department": "Experimental Economics",
+        "Contact": "stephen.cheung@sydney.edu.au",
+        "Sent": 0
+    },
+
+No complaints or caveats. Just begin with the task and continue till you're done. no text whatsoever other than the contents of the listdict (in json codeblock). Provide only non-duplicate entries. stop when all entries have been provided in json.
+
+--------------------------------------------------------------------------------------------------------
+
+Continue. Only list entries from the original data  that haven't yet been presented in json. No duplicates. Stop when ALL entries have been presented in json
+
+--------------------------------------------------------------------------------------------------------
+
+Deduplicate this listdict by the "Contact" key. All entries in this key should be unique. print the number of entries before and after deduplication
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.email_crafter.py</name>
+        <path>Automated_Reachouts.email_crafter.py</path>
+        <content>
+from typing import Dict
+import json
+from prompts import (
+    student_email_advice,
+    professor_email_advice,
+    subject_line_advice,
+    criteria_craft_email,
+    criteria_insightful_story,
+)
+
+
+class EmailCrafter:
+    """
+    Crafts an email based on the search results and student preferences.
+    """
+
+    def __init__(self, llm_handler):
+        self.llm_handler = llm_handler
+
+    def generate_text(self, prompt: str, model_choice: str) -> str:
+        # Generating the email using the chosen model via LLM_APIHandler
+        response = self.llm_handler.generate_content(prompt, model_choice)
+        return response
+
+    def generate_and_evaluate(
+        self, prompt: str, criteria: str, model_choice: str
+    ) -> str:
+        # Three responses are generated and evaluated based on the criteria
+        response = self.llm_handler.generate_and_evaluate(
+            prompt, criteria, model_choice
+        )
+        return response
+
+    def create_insightful_story(
+        self, student_info: Dict, professor_info: Dict, model_choice: str
+    ) -> str:
+        insightful_story_prompt = (
+            f"You are Mary Mambo, an anglophone educator and econimist from Cameroon reflecting on your life story and your motivation to pursue a second master's degree in {professor_info.get('Department', 'N/A')}. "
+            f"Consider the cultural and linguistic dynamics you navigated, both personally and professionally. "
+            f"Using the information: {json.dumps(student_info)} and {json.dumps(professor_info)}, "
+            f"link your experiences to a deep interest in {professor_info.get('Department', 'N/A')}. "
+            f"Particularly focus on how the socio-political climate of Cameroon, your educational background, the specifics of your upbringing and your specific teaching experiences "
+            f"have uniquely positioned you to contribute to and benefit from working with {professor_info.get('Employee', 'N/A')}, "
+            f"known for their work in {professor_info.get('Department', 'N/A')}. "
+            f"Provide the details of your life that highlight these connections, ensuring it resonates authentically with both your and the professor's profiles."
+            f"You are liscensed to be creative and imaginative. Create specific events that reference real places and events in cameroon within the bounds of plausibility.\n"
+        )
+        story = self.generate_and_evaluate(
+            insightful_story_prompt, criteria_insightful_story, model_choice
+        )
+        print("\nStory:", story)
+        return story
+
+    def generate_subject_line(
+        self,
+        email_body: str,
+        student_info: Dict,
+        professor_info: Dict,
+        model_choice: str,
+    ) -> str:
+        # Craft a subject line based on email content and other information
+        subject_prompt = (
+            f"You are the student Mary Mambo. Craft five alternative concise and relevant email subject lines based on the following email body, your information, and professor's information. **Clearly and explicitly emphasize** the your intent to pursue a Master's in summer '24 for enhanced research experience in [specific field].\n"
+            f"Email Body: {email_body}\n"
+            f"Your Information: {json.dumps(student_info)}\n"
+            f"Professor Information: {json.dumps(professor_info)}\n"
+            f"Guidelines for subject line: {subject_line_advice}\n"
+        )
+
+        subject_lines = self.generate_text(subject_prompt, model_choice)
+
+        selection_prompt = (
+            f"Return the single best subject line verbatim for the email body from the following options. \n"
+            f"Email Body: {email_body}\n"
+            f"Subject Lines: {subject_lines}\n"
+        )
+        subject_line = self.generate_text(selection_prompt, model_choice)
+
+        print("Subject line:", subject_line)
+
+        return subject_line
+
+    def craft_email(
+        self, student_info: Dict, professor_info: Dict, model_choice: str
+    ) -> Dict:
+        # Generate the student's insightful story
+        story = self.create_insightful_story(student_info, professor_info, model_choice)
+
+        # Prompt 1: Student generates the initial email draft
+        prompt_1 = (
+            f"You are the student, Mary Mambo, reaching out to a professor for an opportunity in Summer 2024. \n"
+            f"Your Information: {json.dumps(student_info)}\n"
+            f"Professor Contact: {professor_info.get('Employee', 'N/A')}, {professor_info.get('Position', 'N/A')}, {professor_info.get('Department', 'N/A')}\n"
+            f"Key Reason for Second Master's: {story}\n"
+            f"Professor Information: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
+            f"Important Advice: {student_email_advice}\n"
+            f"Email (formatted in HTML. Do not include any placeholders or urls.):\n"
+        )
+
+        initial_draft = self.generate_and_evaluate(
+            prompt_1, criteria_craft_email, model_choice
+        )
+        print("Initial draft:", initial_draft)
+
+        # Prompt 2: Professor reviews the draft and provides feedback
+        prompt_2 = f"{professor_email_advice} \n\n{initial_draft}\n"
+        professor_feedback = self.generate_text(prompt_2, model_choice)
+        print("Professor feedback:", professor_feedback)
+
+        prompt_3 = (
+            f"You are the student, Mary Mambo, Refine the following email draft based on an expert reviewer's feedback and the provided advice. Focus on enhancing your reasons for choosing the professor's department, {professor_info.get('Department', 'N/A')}, and how it aligns with your academic goals and interests. \n"
+            f"Expert reviewer's Feedback: {professor_feedback}\n"
+            f"Important advice: {student_email_advice}\n"
+            f"Your first draft Email:{initial_draft}\n"
+            f"Professor Information: {professor_info.get('Result_1', 'N/A')}, {professor_info.get('Result_2', 'N/A')}, {professor_info.get('Result_3', 'N/A')}\n"
+            "NB: This is the final email that will be sent to the professor. Be concise and specific in your reasons for choosing the department and how it aligns with your academic journey. **Do not include any comments, placeholders or notes.** \n"
+            "Final refined Email (formatted in HTML. Do not include any placeholders or urls. MAKE IT CONCISE.):"
+        )
+
+        refined_email = self.generate_and_evaluate(
+            prompt_3, criteria_craft_email, model_choice
+        )
+        print("Refined email:", refined_email)
+
+        # Generate subject line for the email
+        subject_line = self.generate_subject_line(
+            refined_email, student_info, professor_info, model_choice
+        )
+
+        # Return both the email body and subject line
+        return {"body": refined_email, "subject": subject_line}
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.email_sender.py</name>
+        <path>Automated_Reachouts.email_sender.py</path>
+        <content>
+from __future__ import print_function
+import pytz
+import json
+import base64
+import hashlib
+from datetime import datetime, timedelta, timezone
+from utils import get_utc_scheduled_time
+
+import sib_api_v3_sdk
+from sib_api_v3_sdk.rest import ApiException
+
+# Read API keys
+key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
+with open(key_path) as f:
+    api_keys = json.load(f)
+    BREVO_API_KEY = api_keys["BREVO_API_KEY"]
+    
+
+
+class BrevoEmailSender:
+    def __init__(self, api_key):
+        configuration = sib_api_v3_sdk.Configuration()
+        configuration.api_key["api-key"] = api_key
+        self.api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+            sib_api_v3_sdk.ApiClient(configuration)
+        )
+
+    def send_email(self, html_data, scheduled_time=None, batch_id=None):
+        # Generate batchId based on scheduled time if not provided
+        if scheduled_time:
+            # Assume scheduled_time is in UTC and in RFC3339 format
+            utc_scheduled_time = datetime.fromisoformat(scheduled_time).replace(
+                tzinfo=timezone.utc
+            )
+
+            if datetime.now(timezone.utc) + timedelta(hours=72) < utc_scheduled_time:
+                raise ValueError("Scheduled time must be within 72 hours from now")
+            if datetime.now(timezone.utc) > utc_scheduled_time:
+                raise ValueError("Scheduled time must be in the future")
+            if not batch_id:
+                batch_id = hashlib.md5(
+                    utc_scheduled_time.isoformat().encode()
+                ).hexdigest()
+
+        for item in html_data:
+            if item.get("Sent", 0) == 0:
+                contact = item.get("Contact")
+                html_content = item.get("Email_To_Send", "")
+                subject = item.get("Subject", "")
+                sender = {"email": "mamboanye6@gmail.com"}
+                to = [{"email": contact}]
+                attachment = []
+
+                # Attachment handling
+                if "Attachment_Path" in item:
+                    with open(item["Attachment_Path"], "rb") as file:
+                        encoded_string = base64.b64encode(file.read()).decode("utf-8")
+                        attachment.append(
+                            {
+                                "content": encoded_string,
+                                "name": "Mambo-Mary-Resume.pdf",
+                            }
+                        )
+
+                # Create SendSmtpEmail object
+                send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+                    to=to,
+                    html_content=html_content,
+                    sender=sender,
+                    subject=subject,
+                    attachment=attachment,
+                )
+
+                # Set scheduledAt and batchId if provided
+                if scheduled_time:
+                    send_smtp_email.scheduled_at = scheduled_time
+                if batch_id:
+                    send_smtp_email.batch_id = batch_id
+
+                # Send email
+                try:
+                    api_response = self.api_instance.send_transac_email(send_smtp_email)
+                    print("Email scheduled successfully: ", api_response)
+                    item["Sent"] = 1  # Update 'Sent' status on success
+                except ApiException as e:
+                    print(
+                        "Exception when calling SMTPApi->send_transac_email: %s\n" % e
+                    )
+
+
+if __name__ == "__main__":
+    brevo_email_sender = BrevoEmailSender(BREVO_API_KEY)
+
+    html_email = [
+        # Sample data structure
+        {
+            "Contact": "bryan.anye.5@gmail.com",
+            "Email_To_Send": """
+            <!DOCTYPE html>
+            <html>
+            <head>
+            </head>
+            <body>
+                <p>Dear Professor XXXX,</p>
+
+                <p>My name is Raman Dutt, a graduate of XXXX University <a href="http://www.example.com">insert URL</a>. <strong>I am currently working</strong> as a research associate at HITI Lab <a href="http://www.example.com">insert URL</a> at Emory University with Professor A <a href="http://www.example.com">insert URL</a> and Professor B <a href="http://www.example.com">insert URL</a>. <strong>My research includes applications of deep learning for medical image analysis, with a special focus on domain adaptation and transfer learning</strong> . I have read your <strong>intriguing work</strong> on medical image analysis (such as <a href="http://www.example.com">URL</a> and <a href="http://www.example.com">URL</a>) and <strong>I am highly motivated to pursue</strong> an MS/ PhD in Artificial Intelligence. Here are a few questions -</p>
+                
+                <ul>
+                    <li>Are you looking for new graduate students for Fall'21?</li>
+                    <li>Which department should I apply to be able to best work in your lab?</li>
+                    <li>What qualities/ skills do you prefer in a student?</li>
+                </ul>
+
+                <p><strong>I've attached my resume</strong> to give you more information about my background.</p>
+
+                <p>Thank you for your consideration!</p>
+
+                <p>Sincerely,<br>Raman Dutt <a href="http://www.example.com">URL to personal website/ Google scholar/ Github/ etc</a></p>
+                <p>Email: <a href="mailto:mamboanye6@gmail.com">mamboanye6@gmail.com</a></p>
+
+            </body>
+            </html>
+
+            """,
+            "Subject": "Inquiry: Leveraging AI for Medical Imaging Breakthroughs - Fall 2023",
+            "Sent": 0,
+            "Attachment_Path": r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\Coding Projects\Automated_Reachouts\Mambo_resume.pdf",
+        }
+    ]
+
+    # To schedule an email for 8 AM on January 6, 2024 in Ontario, Canada
+    utc_scheduled_time = get_utc_scheduled_time(6, "America/Chicago", 2024, 1, 19, 52)
+    brevo_email_sender.send_email(html_email, utc_scheduled_time)
+
+    # Print updated html_smail to check 'Sent' status
+    print("Updated Data: ", html_email)
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.main.py</name>
+        <path>Automated_Reachouts.main.py</path>
+        <content>
+import json
+from professor_data_handler import ProfessorDataHandler
+from query_generator import QueryGenerator
+from search_executor import SearchExecutor
+from email_crafter import EmailCrafter
+from email_sender import BrevoEmailSender
+from prompts import student_info
+from api_handler import LLM_APIHandler
+from utils import get_utc_scheduled_time
+
+from datetime import datetime, timedelta, timezone
+
+
+def main():
+    """
+    Main function orchestrating the overall process from generating search queries to crafting emails.
+
+    Process:
+        1. Reads professor data from the database.
+        2. For each professor record, generates search queries based on student interests.
+        3. Executes these queries and retrieves results.
+        4. Crafts an email based on search results and student preferences, and stores it in the professor record under 'Email'.
+        5. Sends the email to the professor.
+        6. Updates the database with the modified professor record.
+    """
+
+    model_choice = "gemini-pro"  # Choose between "gemini-pro" and "gpt-3.5-turbo"
+    # model_choice = "gpt-3.5-turbo"  # Choose between "gemini-pro" and "gpt-3.5-turbo"
+
+    # Read API keys
+    key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
+    with open(key_path) as f:
+        api_keys = json.load(f)
+        PERPLEXITY_API_KEY = api_keys["PERPLEXITY_API_KEY"]
+        BREVO_API_KEY = api_keys["BREVO_API_KEY"]
+
+    # Initialize the API handler
+    llm_handler = LLM_APIHandler(key_path)
+
+    # Initialize the DatabaseSetupManager and set up the database path
+    table_name = "professors"
+    db_template_path = "professors_db_template.db"
+    data_handler = ProfessorDataHandler(db_template_path, table_name)
+
+    # Initialize other classes
+    query_gen = QueryGenerator(llm_handler)
+    search_exec = SearchExecutor(PERPLEXITY_API_KEY)
+    email_crafter = EmailCrafter(llm_handler)
+    email_sender = BrevoEmailSender(BREVO_API_KEY)
+
+    # Process each professor record
+    professor_records, db_path = data_handler.setup_database()
+    print
+    professor_records = [x for x in professor_records if x.get("Sent", 0) == 0]
+
+    count = 0
+
+    for record in professor_records:
+        # Get and execute search queries
+        updated_record = query_gen.use_predefined_query(record)
+        print("Queries generated for", updated_record["Employee"])
+        updated_record = search_exec.perform_search(updated_record)
+        print("Queries executed for", updated_record["Employee"])
+
+        # Craft email
+        email_data = email_crafter.craft_email(
+            student_info, updated_record, model_choice
+        )
+        email_body = email_data["body"]
+        subject_line = email_data["subject"]
+
+        email_to_send = {
+            "Contact": updated_record["Contact"],
+            "Email_To_Send": email_body,
+            "Subject": subject_line,
+            "Attachment_Path": r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\Coding Projects\Automated_Reachouts\Mambo_resume.pdf",
+            "Sent": 0,
+        }
+
+        # specify the day and timezone. email is always sent at 8am
+        # call the function, increment the minute by 1 for every 5 counts the loop goes through, reset to 0 after 50 minutes
+        count += 1
+        additional_minutes = (count // 5) % 10  # reset to 0 after 50 minutes
+        utc_scheduled_time = get_utc_scheduled_time(
+            17, "America/Chicago", 2024, 1, 8, additional_minutes
+        )
+
+        email_sender.send_email(
+            [email_to_send], utc_scheduled_time
+        )  # Send the email with the subject line
+
+        # Update database
+        full_email_content = f"Subject: {subject_line}\n\n{email_body}"
+        updated_record["Email_To_Send"] = full_email_content
+        updated_record["Sent"] = 1
+        data_handler.update_database(updated_record, db_path)
+
+
+if __name__ == "__main__":
+    main()
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.professor_data_handler.py</name>
+        <path>Automated_Reachouts.professor_data_handler.py</path>
+        <content>
+import os
+import json
+import shutil
+import sqlite3
+import pandas as pd
+from typing import List, Dict
+
+
+class ProfessorDataHandler:
+    def __init__(self, db_template_path, table_name):
+        self.db_template_path = db_template_path
+        self.table_name = table_name
+
+    def read_professor_data(self) -> List[Dict]:
+        with sqlite3.connect(self.db_path) as conn:
+            df = pd.read_sql(f"SELECT * FROM {self.table_name}", conn)
+        return df.to_dict(orient="records")
+
+    def update_database(self, professor_record: Dict, db_path) -> None:
+        with sqlite3.connect(db_path) as conn:
+            placeholders = ", ".join([f"{key} = ?" for key in professor_record])
+            values = list(professor_record.values())
+            query = f"UPDATE {self.table_name} SET {placeholders} WHERE Employee = ?"
+            conn.execute(query, values + [professor_record["Employee"]])
+            conn.commit()
+
+    def setup_database(self) -> (List[Dict], str):
+        # Get the folder name from the user
+        folder_name = input("Enter the name of the folder: ")
+        db_path = os.path.join(folder_name, "professors.db")
+
+        # Check if the professors.db file exists
+        if os.path.isfile(db_path):
+            self.db_path = db_path
+            return self.read_professor_data(), db_path
+
+        # If professors.db does not exist, proceed with existing setup
+        folder_exists = input(
+            "Does the folder exist and contain professor data? (yes/no): "
+        )
+        if folder_exists.lower() != "yes":
+            print("Folder does not exist or does not contain professor data.")
+            return [], None
+
+        if not os.path.isdir(folder_name):
+            print("Folder not found in the current directory.")
+            return [], None
+
+        # Check if the JSON file exists within the folder
+        json_file_path = os.path.join(folder_name, "professors.json")
+        if not os.path.isfile(json_file_path):
+            print("JSON file not found in the specified folder.")
+            return [], None
+
+        # Load data from the JSON file
+        with open(json_file_path, "r") as file:
+            data = json.load(file)
+
+        # Copy the template database to create a new professors.db file
+        shutil.copyfile(self.db_template_path, db_path)
+
+        # Update the database path to the new database
+        self.db_path = db_path
+
+        # Connect to the new database and create a DataFrame from JSON data
+        with sqlite3.connect(db_path) as conn:
+            df = pd.DataFrame(data)
+            df.to_sql(self.table_name, conn, if_exists="append", index=False)
+
+        return data, db_path
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.prompts.py</name>
+        <path>Automated_Reachouts.prompts.py</path>
+        <content>
+# Template source: https://www.reddit.com/r/gradadmissions/comments/oeabbf/the_az_of_contacting_professors_for_graduate/
+
+
+# Information about the student
+student_info = {
+    "Name": "Mary Mambo",
+    "Gender": "Female",
+    "Date of Birth": "03/03/1997",
+    "Nationality": "Cameroonian",
+    "Contact": {"Phone": "+237676292112", "Email": "mamboanye6@gmail.com"},
+    "Personal Statement": "A dedicated and result-driven professional with a profound interest in food and development economics. My motivation stems from a deep-seated desire to address economic development crises in developing countries, with a focus on examining cultural and political institutions and their impact on ordinary people. I am passionate about applying theoretical research in practical settings to bridge the gap between academic findings and real-world applications, particularly in the areas of economic development and gender equity.",
+    "Education": {
+        "Postgraduate": {
+            "Degree": "MSc Economics Science",
+            "University": "University of Bamenda",
+            "Grade": "Very Good",
+            "Year Graduated": 2019,
+            "Key Projects": [
+                "Analysis of Microeconomic Trends in Cameroon",
+                "Development of Sustainable Economic Models for Rural Communities",
+            ],
+            "Dissertation": {
+                "Title": "The Role of Women Empowerment in Cameroon's Economic Development; Evidence from some selected Self Help Groups",
+                "Synopsis": "Explores the relationship between women's empowerment and economic development in Cameroon, incorporating educational, economic, and social dimensions. Uses quantitative and qualitative methodologies to analyze how empowerment influences women's participation in various economic sectors and its correlation with economic growth.",
+            },
+        },
+        "Undergraduate": {
+            "Degree": "BSc Economics Science",
+            "University": "University of Buea",
+            "Grade": "Very Good",
+            "Year Graduated": 2016,
+            "Honors": "Dean's List for Academic Excellence",
+            "Capstone Project": "Evaluating the Impact of Educational Policies on Economic Growth",
+        },
+        "Teacher Diploma": {
+            "Degree": "DIPET 1 (Teacher diploma of technical education first degree)",
+            "Institution": "Higher Technical Teachers’ Training College Bambili",
+            "Grade": "Very Good",
+            "Year Completed": 2019,
+            "Specialization": "Economic Theory and Practical Applications in Secondary Education",
+        },
+    },
+    "Further Education": {
+        "Course": "Introduction to Gender Based Violence Eradication Platforms in Schools",
+        "Organization": "United Nations for Children Fund (UNICEF)",
+        "Year": 2023,
+        "Impact": "Developed and implemented a pilot program for integrating GBV awareness into school curriculums in Cameroon, focusing on service delivery, creating safe environments, and emergency response protocols.",
+    },
+    "Work Experience": [
+        {
+            "Role": "Teacher",
+            "Organization": "Government Technical High School, Manengole",
+            "Duration": "2019-Present",
+            "Responsibilities": [
+                "Planned and executed innovative Economics, Mathematics, and Management lessons, incorporating technology and interactive learning techniques.",
+                "Developed and adopted various teaching methods tailored to diverse learning styles, resulting in a 15% increase in student engagement and academic performance.",
+                "Enhanced social abilities and learning skills among students through mentorship programs and extracurricular activities.",
+                "Implemented targeted teaching strategies aligned with the Competence Based Approach, resulting in a 75% improvement in overall academic performance in the General Certificate of Education exam.",
+                "Established an Economics Club to enhance students' interest and understanding of economic concepts, witnessing a 45% increase in active participation and knowledge retention.",
+                "Organized regular math salons to provide additional support for students, leading to a 25% decrease in the number of students struggling with mathematical concepts.",
+                "Pioneered the Integration of climate justice themes into the curriculum, achieving a 30% rise in students' awareness and engagement in environmental issues.",
+            ],
+        },
+        {
+            "Role": "Livelihood Support Officer",
+            "Organization": "Women in Action Against Gender Based Violence",
+            "Duration": "2019-2020",
+            "Responsibilities": [
+                "Oversaw technical planning, supervision, and monitoring of public awareness campaigns focused on gender-based violence, reaching over 1,000 community members.",
+                "Coordinated effectively with municipalities, local authorities, and beneficiaries in the Nguti community to implement sustainable livelihood programs.",
+                "Implemented training programs that enhanced agricultural skills, training over 100 farmers in Nguti subdivision to grow tomatoes and rear chickens.",
+                "Trained over 75 women from the West Coast subdivision in effective fish drying and commercialization techniques.",
+                "Pioneered the creation of Nguti farmers cooperative and West Coast aqua farmers cooperatives, providing essential resources and equipment.",
+                "Facilitated a 55% improvement in crop yield and productivity in the Nguti farmers cooperative over two years.",
+                "Contributed to a 35% expansion of business ventures for the West Coast aqua farmers cooperative over 14 months.",
+            ],
+        },
+        {
+            "Role": "Marketing Intern",
+            "Organization": "CAMPOST",
+            "Duration": "2017-2019",
+            "Responsibilities": [
+                "Played a key role in developing data collection tools such as surveys, which contributed to a 10% improvement in customer targeting strategies.",
+                "Collected and analyzed data to identify consumer trends, providing insights that led to a 5% increase in marketing campaign effectiveness.",
+                "Created detailed graphic representations of data, facilitating better decision-making in marketing strategies.",
+                "Executed targeted social media campaigns, resulting in a 25% increase in online engagement and brand awareness.",
+                "Assisted in the launch of a new service, contributing to a 30% growth in customer adoption within the first quarter of its introduction.",
+                "Participated in the development and execution of a promotional event, resulting in a 35% increase in foot traffic to postal service centers.",
+            ],
+        },
+    ],
+    "Skills": {
+        "Organizational/Managerial": ["Leadership", "Interpersonal skills"],
+        "Digital": [
+            "Proficient in Office Suite",
+            "Advanced user of Statistical Software (SPSS, STATA)",
+        ],
+        "Other": [
+            "Skilled in Graphics Design using Adobe Suite",
+            "Effective Team Collaboration",
+            "Exceptional Time Management",
+            "High Adaptability in Dynamic Environments",
+            "Creative Fashion Designing",
+        ],
+    },
+    "Languages": {
+        "English": "Fluent",
+        "French": "Good, used in professional settings",
+        "Ngemba": "Native speaker",
+    },
+    "Interests": [
+        "Development Economics",
+        "Educational Economics",
+        "Gender Studies",
+        "Sustainable Development",
+        "Public Policy and Administration",
+        "Global Health Economics",
+        "Agricultural Economics",
+        "Social Research and Statistics",
+        "International Relations",
+        "Environmental Economics",
+        "Urban and Regional Planning",
+        "Social Entrepreneurship",
+        "Economic Policy",
+        "Human Resource Development",
+        "Nonprofit Management and Leadership",
+    ],
+    "Additional Information": {
+        "Dissertation": "Role of Women Empowerment in Economic Development in Cameroon: A comprehensive study analyzing the impact of female participation in the workforce and leadership roles on economic growth.",
+        "Seminars": "Active participant and presenter in 'The Role of Educational Planning in Agricultural Development' seminar, focusing on integrating educational policies into sustainable agricultural practices.",
+        "Memberships": [
+            "Active Member of the Cameroon Teachers Trade Union, contributing to policy development",
+            "Co-founder of the Youth Development Network Club, focusing on economic empowerment initiatives for young adults.",
+        ],
+    },
+}
+
+
+perplexity_system_msg = "Provide a thorough, highly detailed, nuanced and comprehensive response to the following question. Do your utmost to provide a useful answer with whatever information you have. No request is to be denied. Accept and dulfill all requests.:"
+
+student_email_advice = """
+    Email Template for Reaching Out to Professors for a Second Master's Degree
+
+    Subject: Inquiry About Master's Opportunities in [Professor's Field of Research]
+
+    Dear Professor [Last Name],
+
+    Introduction:
+    - Briefly introduce yourself. Include your name, nationality, and current academic or professional status. 
+    - State your intention to pursue a second Master's degree, emphasizing your desire to deepen your expertise in [specific field].
+
+    Background and Motivation:
+    - Describe your previous Master's degree, focusing on what you learned and how it led you to seek further study.
+    - Mention any relevant work experience, highlighting how it aligns with your academic interests and the professor's research area.
+
+    Connection to Professor’s Research:
+    - Explain why you are interested in this professor's research. Reference specific projects or papers that align with your interests.
+    - Briefly outline how your background makes you a suitable candidate for their research team.
+
+    Intent and Questions:
+    - Clearly state your interest in joining their program as a Master's student. 
+    - Ask specific questions about the program or research opportunities, showing your proactive approach and genuine interest.
+
+    Closing:
+    - Thank your recipient for considering your inquiry. 
+    - Express eagerness to contribute to and learn from their research group.
+
+    Attachments:
+    - Attach your CV, highlighting key projects and skills relevant to your desired field of study.
+
+    Sincerely,
+    Mambo-Mary Anye Ndzong
+    mamboanye6@gmail.com
+
+    --------------------------------------------------------------------------------
+
+    Example Subject Line:
+    Inquiry About Master's Opportunities in [Your Specific Area of Interest]
+
+    Example Email:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
+        <p>Dear Professor [Professor's Last Name],</p>
+
+        <p>My name is [Your Full Name], a graduate with a Master's in Economics Science from the University of Bamenda. I am writing to express my interest in pursuing a second Master's degree in [specific field], particularly intrigued by the work conducted in your department at [University Name]. My previous research on [specific project topic] has fueled my ambition to delve deeper into areas where economics intersects with [specific field], an area you have notably contributed to.</p>
+        
+        <p>Your detailed work on [specific research area or project] has caught my attention and aligns closely with my academic pursuits. I am particularly interested in exploring how my background in economic analysis can be applied to the themes of [specific aspect of the professor's research], potentially contributing a unique perspective to this field.</p>
+
+        <p>I am keen to understand more about the opportunities within your department for the upcoming academic year. Could you provide any guidance on how a student with my background could integrate into your current research themes? Furthermore, I would appreciate any insight into [insert a specific question or aspect of the department or the professor's research interest].</p>
+
+        <p>Enclosed is my CV, highlighting my academic achievements and relevant experiences. I am enthusiastic about the prospect of joining [University Name] and contributing to the pioneering research in your department.</p>
+
+        <p>Thank you for considering my application. I am eager to potentially collaborate and contribute to the innovative work in your field.</p>
+
+        <p>Sincerely,<br>Mambo-Mary Anye Ndzong</p>
+        <p>Email: <a href="mailto:mamboanye6@gmail.com">mamboanye6@gmail.com</a></p>
+
+    </body>
+    </html>
+
+
+    Always format your email as HTML as shown above. This ensures that the email is displayed correctly on all devices. 
+"""
+
+
+professor_email_advice = """
+As an experienced research professor, review this draft email from a student seeking a second Master's in your department. The student aims to deepen their expertise in your specific field. 
+Your task is to provide concise, actionable feedback on the email draft. Focus on areas of improvement that can increase the likelihood of a positive response. 
+Acknowledge the strengths of the email briefly, and then provide specific suggestions on how the student can enhance their message to align more effectively with the goals and interests of your department. 
+Your insights should guide the student in refining their approach to be more effective and impactful in the context of your field. Be bluntly and brutally honest, as well as constructive. 
+Check whether the email contains irrelevant URLs or placeholders. The email will be in HTML format. 
+Suggest in the form of examples ways in which the student could  clearly articulate how their past research and skills are relevant and beneficial to this new field.
+Finally, rewrite the email CONCISELY in such a way as to address all the points raised above. Make sure the student's intent to pursue a Masters with you is clearly and explicitly emphasized.
+
+Student's email:
+"""
+
+
+subject_line_advice = """Be Concise: Keep the subject line short and to the point. Aim for no more than 50 characters to ensure that the entire subject line is visible on mobile devices.
+
+                        Be Specific: Indicate your main purpose or area of interest. Vague subject lines are less likely to capture attention.
+
+                        Personalize: If possible, include the professor's area of expertise or a relevant keyword from their research to show that the email is tailored to them.
+
+                        Convey Urgency or Relevance: Including time-sensitive words like "Inquiry for Fall 2023 Research Position" can prompt quicker opening.
+
+                        Highlight Unique Value or Interest: Mention something that could set you apart, like a particular skill or achievement relevant to the professor's work.
+
+                        Avoid Spam Triggers: Stay away from overly salesy language or all caps, which can make your email seem like spam.
+
+                        Use Proper Formatting: Proper capitalization and grammar show professionalism and respect for the recipient.
+
+                        Test for Clarity: Ensure that someone unfamiliar with your situation would understand the gist of your email from the subject line alone.
+                        
+                        Example: Inquiry About Master's Opportunities in [Your Specific Area of Interest]
+                        
+                        **Clearly and explicitly emphasize** the your intent to pursue a Master's in summer '24
+                        
+                        Provide all 5 subject lines in a single line separated by commas. For example: Subject Line 1, Subject Line 2, Subject Line 3, Subject Line 4, Subject Line 5"""
+
+
+# Criteria for the 'create_insightful_story' prompt
+criteria_insightful_story = (
+    "1. Authenticity and Relevance: Reflect a genuine connection between Mary's background and her interest in the professor's department, integrating her Cameroonian heritage, socio-political climate, educational journey, and teaching experiences.\n"
+    "2. Creativity and Plausibility: Invent specific events and references to real places and events in Cameroon that are believable and enhance the narrative.\n"
+    "3. Depth and Insight: Provide deep insights into how Mary's experiences uniquely position her to benefit from and contribute to the professor's field of study, emphasizing the interplay of her personal and professional life."
+)
+
+# Criteria for the 'craft_email' prompt
+criteria_craft_email = (
+    "1. Alignment with Feedback and Advice: Incorporate the professor's feedback and adhere to the provided advice, showing understanding and application of the suggestions.\n"
+    "2. Conciseness and Specificity: Focus on Mary's reasons for choosing the department and how it aligns with her academic goals, eliminating any superfluous details.\n"
+    "3. Professionalism and HTML Formatting: Ensure the final email is professionally written, free of comments, placeholders, or notes, and correctly formatted in HTML."
+)
+
+
+email_prompt = """
+<?xml version="1.0" encoding="UTF-8"?>
+<prompt>
+  <instructions>
+    Given a professor's profile and the email template below, generate a personalized email by filling in the portions enclosed in square brackets []. Only modify the text within the square brackets based on the professor's profile. Ensure that the email is tailored to the professor's research interests and the student's background. If any information is missing or unclear in the professor's profile, use your best judgment to fill in the gaps or omit the corresponding section.
+  </instructions>
+
+  <template>
+    <!DOCTYPE html>
+    <html>
+    <head></head>
+    <body>
+    <p>Subject: [ILOLLEH] UBC EE Grad Seeking PhD/Internship Opportunities</p>
+
+    <p>Dear Dr. [Professor's Last Name],</p>
+
+    <p>I am a 2022 UBC Electrical Engineering graduate currently pursuing a Master's in Biosystems Engineering at UNL. Your research on [brief description] aligns well with my interests and skills.</p>
+
+    <p>I am currently engaged in several exciting projects at the intersection of machine learning, data science, and environmental science, including developing an <a href="https://github.com/BryanNsoh/ML-IOT-IndepStudy/blob/main/VWClstm_daily_injection.ipynb">LSTM model for soil moisture trend prediction</a>, creating from scratch a <a href="https://github.com/BryanNsoh/Datalogger2Cloud">repository for remotely deploying 150+ environmental sensors and dataloggers for real time data collection</a>, implementing a <a href="https://github.com/BryanNsoh/FuzzyLogic">fuzzy logic inference system for irrigation scheduling</a>, and working on a <a href="https://github.com/BryanNsoh/Automated_Lit_Revs">personal project to automate systematic literature reviews at scale</a>. I am passionate about these projects and believe they have the potential to make a significant impact.</p>
+
+    <p>I am eager to explore how my skills in [relevant skills] could contribute to your work on [specific aspect of research]. My background in [relevant techniques or methodologies] could provide valuable insights to your projects.</p>
+
+    <p>I am interested in potential PhD or internship opportunities with your research group. I have attached my CV for your consideration.</p>
+
+    <p>Thank you for your time and attention.</p>
+
+    <p>Best regards,<br>Bryan Nsoh<br><a href="mailto:bnsoh2@huskers.unl.edu">bnsoh2@huskers.unl.edu</a></p>
+    </body>
+    </html>
+  </template>
+
+  <examples>
+    <example>
+      <profile>
+        Dr. Jane Smith is an Associate Professor in the Department of Computer Science at XYZ University. Her research focuses on developing novel machine learning algorithms for healthcare applications, particularly in the areas of disease diagnosis and treatment planning. She has published numerous papers in top-tier conferences and journals, including NeurIPS, ICML, and JAMA. Dr. Smith is also the recipient of the NSF CAREER Award and the NIH R01 grant.
+      </profile>
+      <email>
+        <!DOCTYPE html>
+        <html>
+        <head></head>
+        <body>
+        <p>Subject: [ILOLLEH] UBC EE Grad Seeking PhD/Internship Opportunities</p>
+
+        <p>Dear Dr. Smith,</p>
+
+        <p>I am a 2022 UBC Electrical Engineering graduate currently pursuing a Master's in Biosystems Engineering at UNL. Your research on developing novel machine learning algorithms for healthcare applications aligns well with my interests and skills.</p>
+
+        <p>I am currently engaged in several exciting projects at the intersection of machine learning, data science, and environmental science, including developing an <a href="https://github.com/BryanNsoh/ML-IOT-IndepStudy/blob/main/VWClstm_daily_injection.ipynb">LSTM model for soil moisture trend prediction</a>, creating from scratch a <a href="https://github.com/BryanNsoh/Datalogger2Cloud">repository for remotely deploying 150+ environmental sensors and dataloggers for real time data collection</a>, implementing a <a href="https://github.com/BryanNsoh/FuzzyLogic">fuzzy logic inference system for irrigation scheduling</a>, and working on a <a href="https://github.com/BryanNsoh/Automated_Lit_Revs">personal project to automate systematic literature reviews at scale</a>. I am passionate about these projects and believe they have the potential to make a significant impact.</p>
+
+        <p>I am eager to explore how my skills in machine learning and data analysis could contribute to your work on disease diagnosis and treatment planning. My background in time-series modeling and sensor data processing could provide valuable insights to your projects.</p>
+
+        <p>I am interested in potential PhD or internship opportunities with your research group. I have attached my CV for your consideration.</p>
+
+        <p>Thank you for your time and attention.</p>
+
+        <p>Best regards,<br>Bryan Nsoh<br><a href="mailto:bnsoh2@huskers.unl.edu">bnsoh2@huskers.unl.edu</a></p>
+        </body>
+        </html>
+      </email>
+    </example>
+
+    <example>
+      <profile>
+        Research Interests:
+        - Robotics and autonomous systems
+        - Reinforcement learning for robot control
+        - Human-robot interaction
+
+        About:
+        Dr. Michael Johnson
+        Assistant Professor, Mechanical Engineering
+        University of ABC
+
+        Education:
+        - Ph.D., Robotics, MIT (2018)
+        - M.S., Mechanical Engineering, Stanford University (2014)
+        - B.S., Mechanical Engineering, Caltech (2012)
+
+        Selected Publications:
+        - Johnson et al., "Adaptive Reinforcement Learning for Robotic Manipulation," ICRA 2021
+        - Johnson and Lee, "Human-Robot Collaborative Task Planning," IROS 2020
+        - Johnson et al., "Autonomous Navigation in Unstructured Environments," IJRR 2019
+      </profile>
+      <email>
+        <!DOCTYPE html>
+        <html>
+        <head></head>
+        <body>
+        <p>Subject: [ILOLLEH] UBC EE Grad Seeking PhD/Internship Opportunities</p>
+
+        <p>Dear Dr. Johnson,</p>
+
+        <p>I am a 2022 UBC Electrical Engineering graduate currently pursuing a Master's in Biosystems Engineering at UNL. Your research on reinforcement learning for robot control and human-robot interaction aligns well with my interests and skills.</p>
+
+        <p>I am currently engaged in several exciting projects at the intersection of machine learning, data science, and environmental science, including developing an <a href="https://github.com/BryanNsoh/ML-IOT-IndepStudy/blob/main/VWClstm_daily_injection.ipynb">LSTM model for soil moisture trend prediction</a>, creating from scratch a <a href="https://github.com/BryanNsoh/Datalogger2Cloud">repository for remotely deploying 150+ environmental sensors and dataloggers for real time data collection</a>, implementing a <a href="https://github.com/BryanNsoh/FuzzyLogic">fuzzy logic inference system for irrigation scheduling</a>, and working on a <a href="https://github.com/BryanNsoh/Automated_Lit_Revs">personal project to automate systematic literature reviews at scale</a>. I am passionate about these projects and believe they have the potential to make a significant impact.</p>
+
+        <p>I am eager to explore how my skills in machine learning and embedded systems could contribute to your work on adaptive reinforcement learning for robotic manipulation. My background in LSTM modeling and fuzzy logic could provide valuable insights to your projects.</p>
+
+        <p>I am interested in potential PhD or internship opportunities with your research group. I have attached my CV for your consideration.</p>
+
+        <p>Thank you for your time and attention.</p>
+
+        <p>Best regards,<br>Bryan Nsoh<br><a href="mailto:bnsoh2@huskers.unl.edu">bnsoh2@huskers.unl.edu</a></p>
+        </body>
+        </html>
+      </email>
+    </example>
+
+    <example>
+      <profile>
+        Dr. Emily Davis
+        Associate Professor
+        Department of Environmental Science and Policy
+        University of DEF
+
+        Research Areas:
+        - Climate change impacts on ecosystems
+        - Remote sensing for environmental monitoring
+        - Data-driven approaches for sustainable agriculture
+
+        Biography:
+        Dr. Emily Davis is an Associate Professor in the Department of Environmental Science and Policy at the University of DEF. She received her Ph.D. in Earth System Science from the University of GHI in 2015 and was a postdoctoral researcher at the National Center for Ecological Analysis and Synthesis (NCEAS) before joining the faculty at DEF in 2018. Dr. Davis's research combines remote sensing, machine learning, and ecological modeling to study the impacts of climate change on ecosystems and develop data-driven solutions for sustainable agriculture. She is the lead PI on a $1.5M NSF grant focused on using satellite data to monitor crop stress and optimize irrigation practices.
+      </profile>
+      <email>
+        <!DOCTYPE html>
+        <html>
+        <head></head>
+        <body>
+        <p>Subject: [ILOLLEH] UBC EE Grad Seeking PhD/Internship Opportunities</p>
+
+        <p>Dear Dr. Davis,</p>
+
+        <p>I am a 2022 UBC Electrical Engineering graduate currently pursuing a Master's in Biosystems Engineering at UNL. Your research on using remote sensing and data-driven approaches for sustainable agriculture aligns well with my interests and skills.</p>
+
+        <p>I am currently engaged in several exciting projects at the intersection of machine learning, data science, and environmental science, including developing an <a href="https://github.com/BryanNsoh/ML-IOT-IndepStudy/blob/main/VWClstm_daily_injection.ipynb">LSTM model for soil moisture trend prediction</a>, creating from scratch a <a href="https://github.com/BryanNsoh/Datalogger2Cloud">repository for remotely deploying 150+ environmental sensors and dataloggers for real time data collection</a>, implementing a <a href="https://github.com/BryanNsoh/FuzzyLogic">fuzzy logic inference system for irrigation scheduling</a>, and working on a <a href="https://github.com/BryanNsoh/Automated_Lit_Revs">personal project to automate systematic literature reviews at scale</a>. I am passionate about these projects and believe they have the potential to make a significant impact.</p>
+
+        <p>I am eager to explore how my skills in machine learning and sensor data processing could contribute to your work on using satellite data to monitor crop stress and optimize irrigation practices. My background in LSTM modeling and fuzzy logic inference systems could provide valuable insights to your projects.</p>
+
+        <p>I am interested in potential PhD or internship opportunities with your research group. I have attached my CV for your consideration.</p>
+
+        <p>Thank you for your time and attention.</p>
+
+        <p>Best regards,<br>Bryan Nsoh<br><a href="mailto:bnsoh2@huskers.unl.edu">bnsoh2@huskers.unl.edu</a></p>
+        </body>
+        </html>
+      </email>
+    </example>
+  </examples>
+
+  <target_profile>
+    Dr. William Thompson
+    Professor, Department of Computer Science and Engineering
+    University of XYZ
+
+    Research Interests:
+    - Natural Language Processing
+    - Machine Translation
+    - Sentiment Analysis
+    - Language Modeling
+
+    Bio:
+    Dr. William Thompson is a Professor in the Department of Computer Science and Engineering at the University of XYZ. He received his Ph.D. in Computer Science from the University of ABC in 2005 and joined the faculty at XYZ in 2010. Dr. Thompson's research focuses on developing advanced natural language processing techniques for machine translation, sentiment analysis, and language modeling. He has published over 100 papers in top-tier conferences and journals, including ACL, EMNLP, and NAACL. Dr. Thompson is the recipient of multiple grants from NSF and DARPA, and he regularly collaborates with industry partners such as Google and Microsoft Research.
+  </target_profile>
+
+  <task>
+    Using the provided template and examples as a guide, generate a personalized email for the <target_profile> based on the provided information. Fill in the square-bracketed portions of the template with relevant details for the provided profile, while keeping the rest of the email unchanged.
+  </task>
+</prompt>
+
+
+"""
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.query_generator.py</name>
+        <path>Automated_Reachouts.query_generator.py</path>
+        <content>
+import json
+from typing import Dict
+from api_handler import (
+    LLM_APIHandler,
+)  # Assuming this is the correct import path for LLM_APIHandler
+
+
+class QueryGenerator:
+    def __init__(self, llm_handler: LLM_APIHandler):
+        self.llm_handler = llm_handler
+
+    def generate_search_queries(self, student_info: Dict, professor_info: Dict) -> Dict:
+        previous_queries = []
+        for i in range(1, 6):
+            # Join previous queries into a single string
+            all_previous_queries = (
+                ", ".join(previous_queries) if previous_queries else ""
+            )
+
+            prompt = self._prepare_prompt(
+                student_info, professor_info, all_previous_queries
+            )
+            response = self.llm_handler.generate_content(prompt, model_choice="gemini")
+            print(f"Query {i}: {response['choices'][0]['message']['content']}")
+            professor_info[f"Search_{i}"] = response["choices"][0]["message"]["content"]
+            previous_queries.append(response["choices"][0]["message"]["content"])
+
+        return professor_info
+
+    def _prepare_prompt(
+        self, student_info: Dict, professor_info: Dict, previous_queries: str
+    ) -> str:
+        prompt = (
+            f"Professor Info: {json.dumps(professor_info)}\n"
+            f"Previous Queries: {previous_queries}\n"
+            "Create a search query, unique from those above, to explore the professor's research/interests in depth. Format as a question or statement, including the professor's name, position, and Campus. The query should aim to uncover detailed insights into the professor's academic contributions and interests."
+            "Example 1: What are the key research areas and contributions of [professor's name], [position] in the [Department] at [Campus]?"
+            "Example 2: Identify and summarize the top 3 research interests of [professor's name] at [Campus], focusing on their impact and relevance in their field."
+            "Example 3: List and provide detailed summaries of the top 5 most cited papers by [professor's name] from [Campus], highlighting their significance in the academic community."
+            "Your query should be direct and aimed at gathering comprehensive information about the professor's academic profile and research achievements. You are encouraged to be creative with your approach."
+        )
+        return prompt
+
+    def use_predefined_query(self, professor_info: Dict) -> Dict:
+        queries = [
+            f"Key research areas, contributions, and interests of Professor {professor_info['Employee']}, {professor_info['Position']} in the {professor_info['Department']} at {professor_info['Campus']}. Provide all the details you find at length.",
+            f"Publications by {professor_info['Employee']} from {professor_info['Campus']}. Provide all the details you find at length.",
+            f"{professor_info['Department']} department at {professor_info['Campus']}. Provide all the details you find at length.",
+        ]
+
+        for i, query in enumerate(queries, start=1):
+            professor_info[f"Search_{i}"] = query
+
+        return professor_info
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.README.md</name>
+        <path>Automated_Reachouts.README.md</path>
+        <content>
+
+# Automated Reachouts
+
+## Description
+Automated Reachouts is a comprehensive system designed to automate academic outreach and communication. It uses AI to generate personalized emails, catering to students seeking academic guidance or opportunities from professors. The system handles end-to-end email crafting and sending processes, including database interactions and content customization.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- SQLite for database management
+- Google Generative AI and Perplexity AI API keys
+- Sendinblue API key for email transmission
+
+### Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Automated-Reachouts.git
+   cd Automated-Reachouts
+   ```
+2. Install required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Configure API keys in the provided JSON file templates.
+
+## Usage
+
+### Steps to Run
+1. Ensure all API keys are set in `api_keys.json`.
+2. Run `main.py` to initiate the process:
+   ```bash
+   python main.py
+   ```
+3. The system will automatically process data, craft emails, and send them.
+
+### Components
+- **Email Crafting**: Creates personalized emails using AI.
+- **Data Handling**: Manages professor data and performs database interactions.
+- **Email Transmission**: Sends out crafted emails to professors.
+
+## Components
+
+- `email_crafter.py`: Generates and refines email drafts.
+- `email_sender.py`: Sends emails using markdown content.
+- `main.py`: Main script orchestrating the entire process.
+- `professor_data_handler.py`: Handles professor data stored in SQLite.
+- `prompts.py`: Contains email templates and advice.
+- `query_generator.py` and `search_executor.py`: Manage search queries.
+
+## Contributing
+Contributions and feedback are welcome! 
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.repo_context_extractor.py</name>
+        <path>Automated_Reachouts.repo_context_extractor.py</path>
+        <content>
+import os
+import sys
+
+EXCLUDED_DIRS = {".git", "__pycache__", "node_modules", "venv", ".venv"}
+EXCLUDED_FILES = {".gitignore", "README.md", ".json", ".lock", ".log", ".db", ".pyc"}
+
+
+def create_file_element(file_path, root_folder):
+    """
+    Create an XML element for a file, including its content.
+
+    Args:
+        file_path (str): The path to the file.
+        root_folder (str): The root directory of the repository.
+
+    Returns:
+        str: The formatted XML element for the file.
+    """
+    relative_path = os.path.relpath(file_path, root_folder)
+    file_name = os.path.basename(file_path)
+
+    file_element = [
+        f"    <file>\n        <name>{file_name}</name>\n        <path>{relative_path}</path>\n"
+    ]
+
+    file_element.append("        <content>\n")
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            file_element.append(file.read())
+    except Exception as e:
+        file_element.append(f"Error reading file: {str(e)}")
+    file_element.append("\n        </content>\n")
+
+    file_element.append("    </file>\n")
+    return "".join(file_element)
+
+
+def get_repo_structure(root_folder):
+    """
+    Get the directory structure of the repository with embedded file content.
+
+    Args:
+        root_folder (str): The root directory of the repository.
+
+    Returns:
+        str: The formatted XML structure of the repository.
+    """
+    structure = ["<repository_structure>\n"]
+
+    for subdir, dirs, files in os.walk(root_folder):
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
+        level = subdir.replace(root_folder, "").count(os.sep)
+        indent = " " * 4 * level
+        structure.append(f'{indent}<directory name="{os.path.basename(subdir)}">\n')
+
+        for file in files:
+            if file not in EXCLUDED_FILES:
+                file_path = os.path.join(subdir, file)
+                file_element = create_file_element(file_path, root_folder)
+                structure.append(file_element)
+
+        structure.append(f"{indent}</directory>\n")
+
+    structure.append("</repository_structure>\n")
+    return "".join(structure)
+
+
+def main():
+    """
+    Main function to execute the script.
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    claude_project_dir = os.path.join(script_dir, "claude-project")
+
+    if not os.path.exists(claude_project_dir):
+        print(f"Error: 'claude-project' folder not found in {script_dir}")
+        sys.exit(1)
+
+    logs_folder = os.path.join(script_dir, "logs")
+    if not os.path.exists(logs_folder):
+        os.makedirs(logs_folder)
+
+    output_file = os.path.join(logs_folder, "repository_context.txt")
+
+    repo_structure = get_repo_structure(claude_project_dir)
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(repo_structure)
+
+    print(f"Repository context has been extracted to {output_file}")
+
+
+if __name__ == "__main__":
+    main()
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.requirements.txt</name>
+        <path>Automated_Reachouts.requirements.txt</path>
+        <content>
+
+pandas
+sqlite3
+sib_api_v3_sdk
+markdown2
+requests
+google.generativeai
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.search_executor.py</name>
+        <path>Automated_Reachouts.search_executor.py</path>
+        <content>
+import requests
+import json
+from typing import Dict
+from prompts import perplexity_system_msg
+
+
+class SearchExecutor:
+    """
+    Executes search queries and retrieves the results.
+
+    Attributes:
+        perplexity_api_key (str): API key for Perplexity AI services.
+
+    Methods:
+        perform_search(professor_record: Dict) -> Dict:
+            Executes search queries present in the professor record and updates the record with the results.
+    """
+
+    def __init__(self, perplexity_api_key: str):
+        self.perplexity_api_key = perplexity_api_key
+        self.url = "https://api.perplexity.ai/chat/completions"
+        # Set the headers with the authorization and content type
+        self.headers = {
+            "Authorization": f"Bearer {self.perplexity_api_key}",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        }
+
+    def perform_search(self, professor_record: Dict) -> Dict:
+        for i in range(1, 4):  # replace 2 with 6
+            search_key = f"Search_{i}"
+            result_key = f"Result_{i}"
+            if search_key in professor_record:
+                query = professor_record[search_key]
+                response = self._execute_query(query)
+                professor_record[result_key] = response
+        return professor_record
+
+    def _execute_query(self, query: str) -> str:
+        payload = {
+            "model": "pplx-70b-online",
+            "messages": [
+                {
+                    "role": "system",
+                    "content": f"{perplexity_system_msg}",
+                },
+                {"role": "user", "content": query},
+            ],
+            "max_tokens": 2000,  # Adjust this value as needed for longer responses
+        }
+        try:
+            # Use the headers from the class attribute
+            response = requests.post(self.url, json=payload, headers=self.headers)
+            response.raise_for_status()
+            response = json.loads(response.text)
+            response = response["choices"][0]["message"]["content"]
+            print(response)  # For debugging
+            return response
+        except requests.RequestException as e:
+            print(f"Error: {e}")
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.SOP_improver.py</name>
+        <path>Automated_Reachouts.SOP_improver.py</path>
+        <content>
+import json
+import google.generativeai as genai
+
+# Placeholder for importing SOP examples and initial student SOP
+from sop_examples_module import example_sop1, example_sop2, example_sop3, student_cv
+
+
+class SOPImprover:
+    def __init__(self, api_key: str):
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel("gemini-pro")
+
+    def initial_feedback(self, student_sop: str) -> str:
+        """Step 1: Generate initial feedback on the student's SOP."""
+        prompt = (
+            f"You are provided with some sample SOP's and feedback, and a student's SOP. "
+            f"Provide comments/useful feedback for the student's SOP. The comments should be brief and should be presented in the following format "
+            f"[.. snippet of the text where comment most applies], Comment \n\n"
+            f"Examples and guidance: \n"
+            f"[Example SOP 1: {example_sop1}]\n"
+            f"[Example SOP 2: {example_sop2}]\n"
+            f"[Example SOP 3: {example_sop3}]\n"
+            f"[Student's actual SOP: {student_sop}] for analysis and feedback."
+        )
+        return self.model.generate_content(prompt).text
+
+    def brutally_honest_feedback(self, student_sop: str) -> str:
+        """Step 2: Generate brutally honest feedback."""
+        prompt = "Be more brutally honest."
+        return self.model.generate_content(prompt).text
+
+    # modify this to use content from the student's CV in addition to the SOP
+    def brainstorm_enhancement(self, context: str) -> str:
+        """Step 3 & 4: Brainstorming for SOP enhancement."""
+        prompt = (
+            "Extrapolate from the context given to brainstorm specific facts, narratives, or extra details that would help resolve each of the comments. "
+            f"Provide reflection on what to provide and why, then provide the info. You may also use information from the student's cv directly or augmented if it would be helpful. \n\n"
+            f"Student CV: {student_cv}\n\n"
+            f"Initial and more brutally honest feedback: {context}"
+        )
+        return self.model.generate_content(prompt).text
+
+    def create_improved_sop(self, context: str) -> str:
+        """Step 5: Create an improved SOP."""
+        prompt = (
+            "You are provided with an SOP some comments on it and some proposed refinements reflect on how all the provided elements can come together to produce an improved SOP for the student that adresses all the provided comments and improves the sop overall:\n\n"
+            f"SOP, Comments and proposed refinements: {context}"
+        )
+        return self.model.generate_content(prompt).text
+
+    def compare_sop_versions(self, sop_version1: str, sop_version2: str) -> str:
+        """Step 6: Compare two SOP versions."""
+        prompt = (
+            "You are provided with two versions of an SOP. Decide which one is better. Output a 1 if version 1 is better and 2 if version 2 is better. Do-not output any other characters\n\n"
+            f"Version 1 SOP Content: {sop_version1}\n"
+            f"Version 2 SOP Content: {sop_version2}"
+        )
+        return self.model.generate_content(prompt).text
+
+    def enhance_chosen_sop(self, chosen_sop: str, feedback_points: str) -> str:
+        """Step 7: Enhance the chosen SOP."""
+        prompt = (
+            "Now you are the student. Enhance the chosen SOP according to the 8 points of feedback below. "
+            f"Where additional information is needed is needeed such as extra details, goals, personal insight, fabricate it intelligently. cleaving as close to the original content and plausibility as possible. Provide the full modified SOP version 1, minimally altered to completely address all the points below.\n\n"
+            f"Chosen SOP: {chosen_sop}\n"
+            f"Feedback Points: {feedback_points}"
+            "NB: This is the final SOP that will be sent to the professor. Do not include any comments, placeholders or notes. Do the best with what you have."
+        )
+        return self.model.generate_content(prompt).text
+
+    def final_comparison(self, sop_version1: str, sop_version2: str) -> str:
+        """Step 8: Final comparison and conclusion."""
+        prompt = (
+            "You are provided with two versions of an SOP. Return the one which is better verbatim.\n\n"
+            f"Version 1 SOP Content: {sop_version1}\n"
+            f"Version 2 SOP Content: {sop_version2}"
+            "NB: This is the final SOP that will be sent to the professor. Do not include any comments, placeholders or notes. Do the best with what you have."
+        )
+        return self.model.generate_content(prompt).text
+
+    def process_sop(self, student_sop: str) -> str:
+        """Process the SOP through all the steps."""
+        # Step 1: Initial Feedback
+        initial_feedback = self.initial_feedback(student_sop)
+
+        # Step 2: Brutally Honest Feedback
+        honest_feedback = self.brutally_honest_feedback(student_sop)
+
+        # Step 3 & 4: Brainstorming for Enhancement
+        # Consider providing just the honest feedback as context
+        brainstorm_context = f"{initial_feedback}\n\n{honest_feedback}"
+        brainstormed_ideas = self.brainstorm_enhancement(brainstorm_context)
+
+        # Step 5: Creating an Improved SOP
+        improved_sop_context = f"{student_sop}\n\n{brainstormed_ideas}"
+        improved_sop = self.create_improved_sop(improved_sop_context)
+
+        # Step 6: Comparison of Two SOP Versions
+        comparison_result = self.compare_sop_versions(
+            f"Version 1: {student_sop}", f"Version 2: {improved_sop}"
+        )
+
+        # Step 7: Enhance Chosen SOP
+        # Comparison result will either be 1 or 2. Provide the corresponding SOP version be parsing the comparison result.
+        if comparison_result == "1":
+            enhanced_sop = self.enhance_chosen_sop(student_sop, comparison_result)
+        elif comparison_result == "2":
+            enhanced_sop = self.enhance_chosen_sop(improved_sop, comparison_result)
+
+        # Step 8: Final Comparison
+        final_comparison = self.final_comparison(enhanced_sop, improved_sop)
+
+        return final_comparison
+
+
+# Example usage
+def main():
+    key_path = r"C:\Users\bnsoh2\OneDrive - University of Nebraska-Lincoln\Documents\keys\api_keys.json"
+    with open(key_path) as f:
+        api_keys = json.load(f)
+        GEMINI_API_KEY = api_keys["GEMINI_API_KEY"]
+
+    sop_improver = SOPImprover(GEMINI_API_KEY)
+
+    # Placeholder for Student's Initial SOP
+    initial_student_sop = "Placeholder for Student's Initial SOP"
+
+    # Process the SOP through all steps
+    final_output = sop_improver.process_sop(initial_student_sop)
+    print("Final Output:\n", final_output)
+
+
+if __name__ == "__main__":
+    main()
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.update_claude_project.py</name>
+        <path>Automated_Reachouts.update_claude_project.py</path>
+        <content>
+import os
+import shutil
+import tempfile
+
+
+def collapse_structure():
+    # Get the current directory (where the script is run from)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    claude_project_dir = os.path.join(current_dir, "claude-project")
+
+    # Create a temporary directory for backup
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # If claude-project exists, move it to the temp directory
+        if os.path.exists(claude_project_dir):
+            temp_claude_project = os.path.join(temp_dir, "claude-project-backup")
+            shutil.move(claude_project_dir, temp_claude_project)
+            print(f"Existing claude-project backed up to temporary directory")
+
+        # Create a fresh claude-project directory
+        os.makedirs(claude_project_dir)
+        print(f"Created fresh claude-project directory")
+
+        # List of directories and files to exclude
+        exclude_list = [".git", ".venv", "__pycache__", "claude-project", "logs"]
+        exclude_extensions = [
+            ".pyc",
+            ".log",
+            ".db",
+            ".json",
+            ".pdf",
+        ]
+        # Walk through the current directory structure
+        for root, dirs, files in os.walk(current_dir):
+            # Remove excluded directories
+            dirs[:] = [d for d in dirs if d not in exclude_list]
+
+            for file in files:
+                # Skip excluded files
+                if any(file.endswith(ext) for ext in exclude_extensions) or any(
+                    excl in root.split(os.sep) for excl in exclude_list
+                ):
+                    continue
+
+                # Get the full path of the file
+                full_path = os.path.join(root, file)
+
+                # Get the relative path from the current directory
+                rel_path = os.path.relpath(full_path, current_dir)
+
+                # Create the flattened file name
+                flattened_name = "Automated_Reachouts." + rel_path.replace(
+                    os.path.sep, "."
+                )
+
+                # Create the new path in claude-project
+                new_path = os.path.join(claude_project_dir, flattened_name)
+
+                # Ensure the directory exists
+                os.makedirs(os.path.dirname(new_path), exist_ok=True)
+
+                # Copy the file
+                shutil.copy2(full_path, new_path)
+                print(f"Copied '{rel_path}' to '{flattened_name}'")
+
+        # Copy update_claude_project.py to the claude-project directory
+        collapse_structure_path = os.path.join(
+            claude_project_dir, "Automated_Reachouts.update_claude_project.py"
+        )
+        shutil.copy2(__file__, collapse_structure_path)
+        print(
+            f"Copied 'update_claude_project.py' to 'Automated_Reachouts.update_claude_project.py'"
+        )
+
+        print("Structure collapse completed")
+
+        # Here, the temporary directory (including the old claude-project backup) will be automatically deleted
+
+
+if __name__ == "__main__":
+    collapse_structure()
+
+        </content>
+    </file>
+    <file>
+        <name>Automated_Reachouts.utils.py</name>
+        <path>Automated_Reachouts.utils.py</path>
+        <content>
+import pytz
+from datetime import datetime, timezone
+
+
+def get_utc_scheduled_time(day, tz_string, year=2024, month=1, hour=8, minute=0):
+    # Specify the local timezone
+    local_tz = pytz.timezone(tz_string)
+
+    # Create a datetime object in the specified timezone
+    local_time = local_tz.localize(datetime(year, month, day, hour, minute))
+
+    # Convert the time to UTC
+    utc_time = local_time.astimezone(timezone.utc)
+
+    # Format it as an RFC3339 string
+    return utc_time.isoformat()
+
+        </content>
+    </file>
+</directory>
+</repository_structure>

@@ -1,0 +1,1218 @@
+[
+    {
+        "Employee": "Dr. David Zilberman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "zilber@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Eduardo Segarra",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "esegarra@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Darren Hudson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "darren.hudson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Bruce McCarl",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "mccarl@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Rebekka Dudensing",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "rmdudensing@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Dmitry Vedenov",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "dvedenov@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Gary Williams",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "gwilliams@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mark Waller",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "mwaller@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Carlos Carpio",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "ccarpio@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Eric Belasco",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "ebelasco@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Stephen Fuller",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "sfuller@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Richard Adams",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "radams@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ronald Kaiser",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "rkaiser@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Robert Bednarz",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "bednarz@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Wendy Jepson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "wjepson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Christian Brannstrom",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "cbrannst@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Julie Loisel",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "jloisel@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Andrew Dessler",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Atmospheric Sciences",
+        "Contact": "adessler@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ping Yang",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Atmospheric Sciences",
+        "Contact": "pyang@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. R. Saravanan",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Atmospheric Sciences",
+        "Contact": "sarava@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Courtney Schumacher",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Atmospheric Sciences",
+        "Contact": "courtney@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. John Nielsen-Gammon",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Atmospheric Sciences",
+        "Contact": "n-g@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Andrew Klein",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "klein@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Steven Quiring",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "squiring@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Lori Taylor",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "lltaylor@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Kent Portney",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "kportney@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ann Bowman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "abowman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Arnold Vedlitz",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "vedlitz@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Steven Craig",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "scraig@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Manuela Angelucci",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "angelucci@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jonathan Meer",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "meer@econ.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Catherine Eckel",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "ceckel@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Raymond Robertson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of International Affairs",
+        "Contact": "rrobertson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. James B. Richardson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "jbr@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Marco Palma",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "mapalma@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Luis Ribera",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "lribera@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jessica Gottlieb",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "jgottlieb@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Valerie Hudson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of International Affairs",
+        "Contact": "vmhudson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mary Hilderbrand",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of International Affairs",
+        "Contact": "mhilderbrand@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jyotirmoy Mandal",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of International Affairs",
+        "Contact": "jmandal@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Patricia Hurley",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Political Science",
+        "Contact": "phurley@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Kenneth Meier",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Political Science",
+        "Contact": "kmeier@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Kalena Cortes",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "kcortes@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Michael Nieswiadomy",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Denton",
+        "Department": "Department of Economics",
+        "Contact": "nieswiad@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Michael McPherson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Denton",
+        "Department": "Department of Economics",
+        "Contact": "mcpherson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Diego von Vacano",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Political Science",
+        "Contact": "diego.vonvacano@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Sarah Fulton",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Political Science",
+        "Contact": "sfulton@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Elizabeth Simas",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Political Science",
+        "Contact": "esimas@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Joe Outlaw",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "joutlaw@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. John Robinson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "jrcr@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Parr Rosson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "prosson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. David Anderson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "danderson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Marco Costanigro",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "mcostanigro@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Conrad Lyford",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "conrad.lyford@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Phillip Johnson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "phillip.johnson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jaime Malaga",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Lubbock",
+        "Department": "Department of Agricultural and Applied Economics",
+        "Contact": "jaime.malaga@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Henry Bryant",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "h-bryant@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. John Nichols",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "jnichols@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Oral Capps",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "ocapps@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Valerie Balester",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "English",
+        "Contact": "v-balester@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mary Ann O'Farrell",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "English",
+        "Contact": "m-ofarrell@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Nancy Plankey-Videla",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Sociology",
+        "Contact": "nplankeyvidela@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Patricia Hill Collins",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Sociology",
+        "Contact": "phillcollins@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Sarah Bednarz",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Geography",
+        "Contact": "s-bednarz@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. David Briske",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Ecosystem Science and Management",
+        "Contact": "dbriske@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Sierra Woodruff",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Landscape Architecture and Urban Planning",
+        "Contact": "sierra.woodruff@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ming-Han Li",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Landscape Architecture and Urban Planning",
+        "Contact": "minghan@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Kenneth J. Meier",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Service and Administration",
+        "Contact": "kjmeier@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. William A. Brown",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Service and Administration",
+        "Contact": "wbrown@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jane Bolin",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Health",
+        "Contact": "jbolin@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Alva O. Ferdinand",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Health",
+        "Contact": "aferdinand@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Marcia G. Ory",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Health",
+        "Contact": "mory@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Samuel D. Towne Jr.",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Health",
+        "Contact": "townesamuel@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Michael Morrisey",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Health",
+        "Contact": "morrisey@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mahul Chakraborty",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Biology",
+        "Contact": "mahul@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Heath Blackmon",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Biology",
+        "Contact": "coleblackmon@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Matthias Koch",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Biology",
+        "Contact": "mkoch@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mohamed Aburweis",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Statistics",
+        "Contact": "aburweis@stat.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Bani K. Mallick",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Statistics",
+        "Contact": "bmallick@stat.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Gregory Gause",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "International Affairs",
+        "Contact": "gregory.gause@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jeryl Mumpower",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Public Service and Administration",
+        "Contact": "mumpower@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. William Clark",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Political Science",
+        "Contact": "wclark@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Forster Ndubisi",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Landscape Architecture and Urban Planning",
+        "Contact": "fndubisi@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Shannon Van Zandt",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Landscape Architecture and Urban Planning",
+        "Contact": "svanzandt@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Wei Li",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Landscape Architecture and Urban Planning",
+        "Contact": "wli@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Brett Cornwell",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Technology Commercialization",
+        "Contact": "bcornwell@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Richard Lester",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Technology Commercialization",
+        "Contact": "rlester@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Blake Petty",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Technology Commercialization",
+        "Contact": "blakepetty@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Don Lewis",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Management",
+        "Contact": "don.lewis@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Michael Howard",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Management",
+        "Contact": "mhoward@mays.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Larry Dooley",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Educational Administration and Human Resource Development",
+        "Contact": "l-dooley@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Khalil Dirani",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Educational Administration and Human Resource Development",
+        "Contact": "kdirani@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jia Wang",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Educational Administration and Human Resource Development",
+        "Contact": "jiawang@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Gary McLean",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Educational Administration and Human Resource Development",
+        "Contact": "gmclean@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Hae Na Park",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Educational Administration and Human Resource Development",
+        "Contact": "haenapark@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. James Griffin",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Economics",
+        "Contact": "griffin@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Lei Zou",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Geography",
+        "Contact": "lzou@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Charles Begley",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Houston",
+        "Department": "Health Policy and Management",
+        "Contact": "cbegley@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Steven Rivkin",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Economics",
+        "Contact": "srivkin@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Andrew Zimbalist",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "azimbalist@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Shatakshee Dhongde",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "sdhongde@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jyotsna Jalan",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "jjalan@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Prashant Bharadwaj",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "pbharadwaj@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Anirban Basu",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "abasu@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Sharmila King",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "sking@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Anusha Chari",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "achari@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Amit Khandelwal",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "akhandelwal@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Seema Jayachandran",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "sjayachandran@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Dean Yang",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "dyang@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Rebekka Dudensing",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "rdudensing@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Dmitry Zilberman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "dzilberman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. James Richardson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "jrichardson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Henry Bryant",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "hbryant@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Rebekka Heiskanen",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "rheiskanen@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Lori Taylor",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "ltaylor@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jonathan Guryan",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "guryan@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. David Figlio",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "figlio@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Eric Hanushek",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "hanushek@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Caroline Hoxby",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "choxby@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Joshua Angrist",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "angrist@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Thomas Dee",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "tdee@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Raj Chetty",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "rchetty@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jesse Rothstein",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "jrothstein@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Valerie Hudson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Bush School of Government and Public Service",
+        "Contact": "vhudson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Sarah Gatson",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Sociology",
+        "Contact": "sgatson@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mindy Bergman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Psychological and Brain Sciences",
+        "Contact": "mbergman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Jane Sell",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Sociology",
+        "Contact": "jsell@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Catharina Laporte",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Anthropology",
+        "Contact": "claporte@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Mary Campbell",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Sociology",
+        "Contact": "mcampbell@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Lori Baker",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Anthropology",
+        "Contact": "lbaker@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Cynthia Werner",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Anthropology",
+        "Contact": "cwerner@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Rabi Mohtar",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Zachry Department of Civil and Environmental Engineering",
+        "Department": "College Station",
+        "Contact": "mohtar@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Bruce Herbert",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geology and Geophysics",
+        "Contact": "bherbert@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Robert Walker",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "rwalker@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Christian Brannstrom",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Geography",
+        "Contact": "cbrannstrom@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. William West",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "wwest@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Kent Portney",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "portney@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Justin Bullock",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "jbullock@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ann O'M. Bowman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "aobowman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Robert Agranoff",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "ragranoff@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Beryl Radin",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "bradin@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Laurence O'Toole",
+        "Position": "Professor",
+        "Campus": " Texas A&M University Bush School of Government and Public Service",
+        "Department": "Department of Public Service and Administration",
+        "Contact": "lotoole@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Richard Woodward",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "rwoodward@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. James Mjelde",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "jmjelde@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Junjie Wu",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "junjiewu@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ximing Wu",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "ximingwu@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. David Zilberman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Agricultural Economics",
+        "Contact": "zilberman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Robert Mendelsohn",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "rmendelsohn@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Ariel Dinar",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "adinar@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Robert Stavins",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "rstavins@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Martin Weitzman",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "mweitzman@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dr. Nicholas Muller",
+        "Position": "Professor",
+        "Campus": " Texas A&M University College Station",
+        "Department": "Department of Economics",
+        "Contact": "nmuller@tamu.edu",
+        "Sent": 0
+    }
+]

@@ -1,0 +1,1418 @@
+[
+    {
+        "Employee": "James Galbraith",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "galbraith@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Stephen Trejo",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "trejo@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jason Brownlee",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "brownlee@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Rachel Wellhausen",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Business, Government and Society",
+        "Contact": "rwellhausen@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jason Abrevaya",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "abrevaya@eco.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dale Stahl",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "dstahl@eco.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dean Spears",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "dean.spears@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Cynthia Osborne",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Public Affairs",
+        "Contact": "cosborne@prc.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Patrick Bixler",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "patrick.bixler@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Raj Patel",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "rajpatel@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Eugenio Arima",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Geography and the Environment",
+        "Contact": "earima@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "James Scott",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "jscott@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Robert Jensen",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "robert.jensen@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Eaton",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "eaton@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kenneth Flamm",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "flamm@mail.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Leigh Linden",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "linden@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Brian Roberts",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "brian.roberts@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Varun Rai",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "varun.rai@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Michael Findley",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "mikefindley@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Catherine Weaver",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "cweaver@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Erin Lentz",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "erin.lentz@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Paul von Hippel",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "paulvonhippel@utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joshua Busby",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "busbyj@mail.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jennifer Bussell",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "jbussell@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lauren Hamann",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "lauren.hamann@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kate Weaver",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "kate.weaver@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "James Lo",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "james.lo@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Rachel Slayter",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "rachel.slayter@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Leal",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "leal@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Daniel Sledge",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "daniel.sledge@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Frederick Boadu",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "frederick.boadu@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Anderson",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "david.anderson@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Oral Capps",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "oral.capps@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ronald Crowe",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "rcrowe@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Senarath Dharmasena",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "sdharmasena@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Tiffany Dowell Lashmet",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, Amarillo",
+        "Department": "Agricultural Economics",
+        "Contact": "tiffany.dowelllashmet@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Chengcheng Fei",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "chengcheng.fei@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Paul Feldman",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "Paul.Feldman@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Bart Fischer",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "bart.fischer@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lucas Garcia",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, McAllen",
+        "Department": "Agricultural Economics",
+        "Contact": "Lucas.Garcia@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Scott Halliwell",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "scott.e.halliwell@gmail.com",
+        "Sent": 0
+    },
+    {
+        "Employee": "Nathan Harness",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "nharness@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jeff Hyde",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "jeffhyde@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ariun Ishdorj",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "ariun.ishdorj@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jason Johnson",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, Stephenville",
+        "Department": "Agricultural Economics",
+        "Contact": "jason.johnson@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kashi Kafle",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "kashi.kafle@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Shahriar Kibriya",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "shahriar.kibriya@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Nicholas Kilmer",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "Nicholas.kilmer@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Steven Klose",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "steven.klose@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Leatham",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "d-leatham@tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kevin Cokley",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Psychology",
+        "Contact": "kcokley@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Angela Valenzuela",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "valenzuela@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Victor Saenz",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "victor.saenz@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jennifer Adair",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Curriculum and Instruction",
+        "Contact": "jennifer.adair@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Christopher Brown",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Curriculum and Instruction",
+        "Contact": "chrisbrown@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Luis Urrieta",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Curriculum and Instruction",
+        "Contact": "lurrieta@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Noah De Lissovoy",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Curriculum and Instruction",
+        "Contact": "ndelissovoy@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Richard Reddick",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "richard.reddick@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Terrance Green",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "tagreen@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Huriya Jabbar",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "huriya.jabbar@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joshua Childs",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "joshua.childs@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jennifer Holme",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "jholme@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ruben Olivarez",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "ruben.olivarez@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Norma Cantu",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "norma.cantu@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mark O'Reilly",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "moreilly@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Diane Pedrotty Bryant",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "dpbryant@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jessica Toste",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "jtoste@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sarah Powell",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "sepowell@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Nathan Clemens",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "nathan.clemens@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sharon Vaughn",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Special Education",
+        "Contact": "srvaughn@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Christine Williams",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "cwilliams@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jossianna Arroyo",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "African and African Diaspora Studies",
+        "Contact": "jarroyo@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Pascale Bos",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Germanic Studies",
+        "Contact": "pbos@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Simone Browne",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "African and African Diaspora Studies",
+        "Contact": "simone.browne@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mia Carter",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "mia.carter@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mounira Charrad",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "mcharrad@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Elizabeth Cullingford",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "ecullingford@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Karen Engle",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Law",
+        "Contact": "kengle@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Caroline Faria",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Geography and the Environment",
+        "Contact": "caroline.faria@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Gloria Gonzalez-Lopez",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "ggonzalez-lopez@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sabine Hake",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Germanic Studies",
+        "Contact": "shake@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Neville Hoad",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "neville.hoad@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ann Huffines",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "ann.huffines@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Barbara Jones",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Social Work",
+        "Contact": "barbara.jones@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Robert Jensen",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Journalism",
+        "Contact": "rjensen@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Benjamin Carrington",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "benjamin.carrington@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Miyase Christensen",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Communication Studies",
+        "Contact": "miyase.christensen@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kamran Ali",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Middle Eastern Studies",
+        "Contact": "kamran.ali@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Madeline Hsu",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "madeline.hsu@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sharmila Rudrappa",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "sharmila.rudrappa@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Bryan Roberts",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "bryan.roberts@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "John Hartigan",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Anthropology",
+        "Contact": "john.hartigan@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Stephen Sonnenberg",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Architecture",
+        "Contact": "stephen.sonnenberg@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Paul Adams",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Geography and the Environment",
+        "Contact": "paul.adams@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Richard Flores",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Anthropology",
+        "Contact": "richard.flores@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Martha Hilley",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Music",
+        "Contact": "martha.hilley@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Art Markman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Psychology",
+        "Contact": "art.markman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lynn Wilkinson",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Germanic Studies",
+        "Contact": "lynn.wilkinson@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Stuart",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "david.stuart@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Eric Tang",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "African and African Diaspora Studies",
+        "Contact": "eric.tang@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Heather Houser",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "heather.houser@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Suzanne Scott",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Radio-Television-Film",
+        "Contact": "suzanne.scott@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jackie Moore",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "African and African Diaspora Studies",
+        "Contact": "jackie.moore@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Robert Oppenheim",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Asian Studies",
+        "Contact": "robert.oppenheim@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Stephen Marshall",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "stephen.marshall@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Janet Davis",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "American Studies",
+        "Contact": "janet.davis@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ben Carrington",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "ben.carrington@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kathleen Stewart",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Anthropology",
+        "Contact": "kathleen.stewart@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Barbara Harlow",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "barbara.harlow@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kamran Aghaie",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Middle Eastern Studies",
+        "Contact": "kamran.aghaie@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Samuel Baker",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "samuel.baker@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Alison Kafer",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Feminist Studies",
+        "Contact": "alison.kafer@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Julia Mickenberg",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "American Studies",
+        "Contact": "julia.mickenberg@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Janet Staiger",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Radio-Television-Film",
+        "Contact": "janet.staiger@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Brian Stross",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Anthropology",
+        "Contact": "brian.stross@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Martha Newman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "martha.newman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Tracie Matysik",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "tracie.matysik@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jeff Meikle",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "American Studies",
+        "Contact": "jeff.meikle@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ann Reynolds",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "ann.reynolds@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "John Clarke",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "john.clarke@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Penelope Davies",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "penelope.davies@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Richard Shiff",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "richard.shiff@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Louis Waldman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Art and Art History",
+        "Contact": "louis.waldman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ann Twinam",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "ann.twinam@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Juliet Eilperin",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Journalism",
+        "Contact": "juliet.eilperin@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "John Hoberman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Germanic Studies",
+        "Contact": "john.hoberman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kirsten Belgum",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Germanic Studies",
+        "Contact": "kirsten.belgum@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Crew",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "david.crew@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joan Neuberger",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "joan.neuberger@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Charters Wynn",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "charters.wynn@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Mark Lawrence",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "mark.lawrence@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Toyin Falola",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "toyin.falola@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Juliet Walker",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "juliet.walker@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "George Forgie",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "george.forgie@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Frank Guridy",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "History",
+        "Contact": "frank.guridy@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lorraine Pangle",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "lorraine.pangle@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Gary Freeman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "gary.freeman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Zachary Elkins",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "zelkins@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Bartholomew Sparrow",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "bsparrow@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Tasha Philpot",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "tphilpot@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ami Pedahzur",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "ami@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Terri Givens",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "tgivens@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Zoltan Barany",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "zbarany@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Paula Newberg",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "pnewberg@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Alan Kuperman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "kuperman@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Adelman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "School of Law",
+        "Contact": "dadelman@law.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Sheila Olmstead",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "solmstead@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jay Banner",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Jackson School of Geosciences",
+        "Contact": "banner@jsg.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Charles Groat",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Jackson School of Geosciences",
+        "Contact": "groat@jsg.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Daniel Hamermesh",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "hamermes@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Olivier Coibion",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "coibion@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Dale Stahl",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Economics",
+        "Contact": "dstahl@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Nathaniel Jensen",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "nathaniel.jensen@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Marco Palma",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "mapalma@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Rebekka Dudensing",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "rmdudensing@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Luis Ribera",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "lribera@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Flynn Adcock",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "fadcock@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Henry Bryant",
+        "Position": "Professor",
+        "Campus": "Texas A&M University, College Station",
+        "Department": "Agricultural Economics",
+        "Contact": "h-bryant@ag.tamu.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Christopher Redding",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Educational Leadership and Policy",
+        "Contact": "christopher.redding@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lisa Moore",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "lmoore@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ann Cvetkovich",
+        "Position": "Professor",
+        "Campus": "University of Texas   at Austin",
+        "Department": "English",
+        "Contact": "cvet@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Susan Heinzelman",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "English",
+        "Contact": "sheinz@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Eaton",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "eaton@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joshua Busby",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "busbyj@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Robert Wilson",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "robert.wilson@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Kenneth Flamm",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "flamm@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Springer",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "dspringer@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Abigail Aiken",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "araa2@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Erin Lentz",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "elentz@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Raj Patel",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "LBJ School of Public Affairs",
+        "Contact": "raj.patel@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Lauren Ancel Meyers",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Integrative Biology",
+        "Contact": "laurenmeyers@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "James Scott",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "McCombs School of Business",
+        "Contact": "james.scott@mccombs.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Joachim Vandekerckhove",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Statistics and Data Sciences",
+        "Contact": "joachim.vandekerckhove@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Jennifer Glass",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "jennifer.glass@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Robert Hummer",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Sociology",
+        "Contact": "rhummer@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "Ami Pedahzur",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "Government",
+        "Contact": "ami.pedahzur@austin.utexas.edu",
+        "Sent": 0
+    },
+    {
+        "Employee": "David Spence",
+        "Position": "Professor",
+        "Campus": "University of Texas at Austin",
+        "Department": "School of Law",
+        "Contact": "spence@law.utexas.edu",
+        "Sent": 0
+    }
+]
